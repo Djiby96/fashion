@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to our online store, your ultimate fashion destination for the whole family. Explore our curated selection of trendy clothing, shoes, and accessories for men, women, and children. Find your signature style at Our Store">
+    <link rel="icon" href="/logo/l1.jpg" type="image/jpg">
+    <title>Clothes, shoes and accessories | Women's, Men's, Child & Baby</title>
+    <!-- boostrap css -->
+    <link rel="stylesheet" href="/bootstrap-css-4.5.0/bootstrap.min.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="/fontawesome_5.15.4/css/all.css">
+
+    <!-- my-templates-css -->
+    <link rel="stylesheet" href="/my-templates-css/globalCss.css">
+
+    <!-- my-css -->
+    <link rel="stylesheet" href="/my-css/accueil.css">
+
+    <!-- media-querie -->
+    <link rel="stylesheet" href="/media-querie/mq_accueil.css">
+</head>
+<body>
+    <!-- navbar -->
+    <header>
+        <%- include("./navigation.html") %>
+    </header>
+
+    <!-- carousel -->
+    <section class="mb-6">
+        <%- include("./carousel.html") %>
+    </section>
+
+    <!-- Newest -->
+    <section class="mb-5">
+        <div>
+            <h5 class="text-center text-muted f-w-b op-05 mb-5 fs-2 text-shadow-1" id="title">
+                OUR NEW STOCK
+            </h5>
+            <div>
+
+                <!-- homme -->
+                <div class="mb-4">
+                    <div class="ml-3 bg-black text-white bx-s-10 width-12 py-2 px-4 fs-14 f-w-b rounded text-center clip-point-2">
+                        <i class="fas fa-male"></i>
+                        Men's
+                    </div>
+                </div>
+                <%if(products_h.length>=1){%>
+                    <div class="center mb-5">
+                        <%products_h.forEach((product) =>{%>
+                            <a href="/<%=product.gender%>/<%=product.category%>/<%=product.title_concat%>-<%=product.number%>" class="link_product transition-1 width-13 bx-s-2 hover-bx-s-10 m-2 m-lg-3 br-06 m-w-95 t-d-n pb-4" title="<%=product.title%>">
+                                <div class="center">
+                                    <img src="<%=product.url_img%>" alt="<%=product.title%>" class="imgs_product height-10 mb-2 br-06" style="max-width: 100% !important;">
+                                </div>
+                                <div class="product_title text-muted ellipsis-2 fs-075 mb-3 px-2">
+                                    <%=product.title%>
+                                </div>
+                                <h5 class="center">
+                                    <%if(product.price>0){%>
+                                        <span class="bg-black py-2 px-4 rounded bx-s-6 text-white fs-075 f-w-b">
+                                            <%=product.price%> $
+                                        </span>
+                                    <%}else{%>
+                                        <span class="bg-black py-2 px-4 rounded bx-s-6 text-white fs-075">price depending size</span>
+                                    <%}%>
+                                </h5>
+                            </a>
+                        <%})%>
+                    </div>
+                <%}else{%>
+                    <div class="center mb-5">
+                        <a href="/homme/vetements/chemise-original-turque-522281" title="chemise original turque" class="link_product transition-1 width-14 bx-s-2 hover-bx-s-10 m-2 m-lg-3 br-06 m-w-95 t-d-n pb-4">
+                            <img src="/product/03_04_2023_522281_1.jpg" alt="chemise original turque" class="imgs_product w-100 height-10 mb-2 br-06">
+                            <div class="product_title text-muted online-text fs-075 mb-3 px-2">
+                                chemise original turque
+                            </div>
+                            <h5 class="center">
+                                <span class="bg-black py-2 px-4 rounded bx-s-6 text-white fs-075">8 000 $</span>
+                            </h5>
+                        </a>
+                    </div>
+                <%}%>
+
+
+                <!-- femme -->
+                <div class="mb-4">
+                    <div class="ml-3 text-white bx-s-10 width-12 py-2 px-4 fs-14 rounded text-center clip-point-2 f-w-b" style="background-color: #f76b8a;">
+                        <i class="fas fa-female"></i>
+                        Women's
+                    </div>
+                </div>
+                <%if(products_f.length>=1){%>
+                    <div class="center">
+                        <%products_f.forEach((product) =>{%>
+                            <a href="/<%=product.gender%>/<%=product.category%>/<%=product.title_concat%>-<%=product.number%>" class="link_product transition-1 width-13 bx-s-2 hover-bx-s-10 m-2 m-lg-3 br-06 m-w-95 t-d-n pb-4" title="<%=product.title%>">
+                                <div class="center">
+                                    <img src="<%=product.url_img%>" alt="<%=product.title%>" class="imgs_product height-10 mb-2 br-06" style="max-width: 100% !important;">
+                                </div>
+                                <div class="product_title text-muted ellipsis-2 fs-075 mb-3 px-2">
+                                    <%=product.title%>
+                                </div>
+                                <h5 class="center">
+                                    <%if(product.price>0){%>
+                                        <span class="bg-orange-woman py-2 px-4 rounded bx-s-6 text-white fs-075 f-w-b">
+                                            <%=product.price%> $
+                                        </span>
+                                    <%}else{%>
+                                            <span class="bg-orange-woman py-2 px-4 rounded bx-s-6 text-white fs-075">price depending size</span>
+                                    <%}%>
+                                </h5>
+                            </a>
+                        <%})%>
+                    </div>
+                <%}else{%>
+                    <div class="center">
+                        <a href="/femme/vetements/Robe-grande-taille-classique-505206" title="Robe grande taille classique" class="link_product transition-1 width-14 bx-s-2 hover-bx-s-10 m-2 m-lg-3 br-06 m-w-95 t-d-n pb-4">
+                            <img src="/product/03_04_2023_505206_1.jpg" alt="Robe grande taille classique" class="imgs_product w-100 height-10 mb-2 br-06">
+                            <div class="product_title text-muted online-text fs-075 mb-3 px-2">
+                                Robe grande taille classique
+                            </div>
+                            <h5 class="center">
+                                <span class="bg-orange-woman py-2 px-4 rounded bx-s-6 text-white fs-075">20 000 $</span>
+                            </h5>
+                        </a>
+                    </div>
+                <%}%>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections -->
+    <section style="margin-bottom: 6rem;">
+        <div class="center mb-3">
+            <h5 class="f-w-b fs-2 text-shadow-1">Our collections</h5>
+        </div>
+
+        <div class="center bg-light" style="padding: 3rem 0 4rem 0;">
+            <div class="column-center br-06 bg-white bx-s-10 width-30 height-24 m-2 m-lg-4 m-w-80">
+                <h5 class="mb-3 text-shadow-1 fs-16">
+                    <i class="fas fa-male"></i>
+                    Men's
+                </h5>
+                <p class="text-muted fs-085 px-3">
+                    Dive into our meticulously curated collection of men's clothing, seamlessly blending trendiness with timeless classics. From impeccable shirts to sophisticated suits, each piece is designed to make you stand out.
+                    Stride with confidence with our range of shoes that marry comfort with style. From casual sneakers to formal footwear, we have something for every style and occasion.
+                    Complete your look with our carefully selected accessories. From sleek belts to refined watches, every detail matters.
+
+                    <br><br>
+                    Explore our emporium today and discover how our thoughtful selection can transform your style.
+                </p>
+                <div class="center">
+                    <a href="/men/clothing" class="m-2 m-lg-3">
+                        <button class="bg-black br-06 bx-s-10 py-2 out-n border-0 px-4 fs-1 cl-white hover-scale-11 f-w-b">
+                            <i class="fas fa-tshirt"></i>
+                            Clothing
+                        </button>
+                    </a>
+                    <a href="/men/shoes" class="m-2 m-lg-3">
+                        <button class="bg-black br-06 bx-s-10 py-2 out-n border-0 px-4 fs-1 cl-white hover-scale-11 f-w-b">
+                            <i class="fas fa-shoe-prints"></i>
+                            Shoes
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="column-center br-06 bg-white bx-s-10 width-30 height-24 m-2 m-lg-4 m-w-80">
+                <h5 class="mb-3 text-shadow-1 fs-16 cl-orangered">
+                    <i class="fas fa-male"></i>
+                    Women's
+                </h5>
+                <p class="text-muted fs-085 px-3">
+                    Immerse yourself in our meticulously curated collection of women's clothing, seamlessly blending trendiness with timeless classics. From exquisite dresses to chic ensembles, each piece is designed to make you shine.
+                    Step out with confidence with our range of shoes that marry comfort with style. From sophisticated heels to casual sneakers, we have something for every occasion and style.
+                    Complete your look with our carefully selected accessories. From delicate jewelry to elegant handbags, every detail is thoughtfully chosen to enhance your look.
+ 
+                    <br><br>
+                    Explore our emporium today and discover how our thoughtful selection can redefine your style.
+                </p>
+                <div class="center">
+                    <a href="/women/clothing" class="m-2 m-lg-3">
+                        <button class="bg-orangered br-06 bx-s-10 py-2 out-n border-0 px-4 fs-1 f-w-b cl-white hover-scale-11">
+                            <i class="fas fa-tshirt"></i>
+                            Clothing
+                        </button>
+                    </a>
+                    <a href="/women/shoes" class="m-2 m-lg-3">
+                        <button class="bg-orangered br-06 bx-s-10 py-2 out-n border-0 px-4 fs-1 f-w-b cl-white hover-scale-11">
+                            <i class="fas fa-shoe-prints"></i>
+                            Shoes
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="column-center br-06 bg-white bx-s-10 width-30 height-24 m-2 m-lg-4 m-w-80">
+                <h5 class="mb-3 text-shadow-1 fs-16 cl-purple">
+                    <i class="fas fa-baby"></i>
+                    Child & Baby
+                </h5>
+                <p class="text-muted fs-085 px-3">
+                    Dive into our specially curated collection for toddlers and young children, seamlessly blending comfort with playful style. Cute and functional outfits for every stage of their growth.
+                    Dress up your little explorers with our range of cute and durable shoes. From cozy booties to first-step sneakers, we have everything to accompany them in their adventures.
+                    Complete their look with our accessories specially designed for the little ones. Soft hats to colorful socks, every detail is thoughtfully chosen to keep them stylish and comfortable.
+                
+                    <br><br>
+                    Explore our emporium today and discover how our thoughtful selection can delight your little treasures.
+                </p>
+                <div class="center">
+                    <a href="/child-baby">
+                        <button class="bg-purple br-06 bx-s-10 py-2 out-n border-0 px-4 fs-12 f-w-b cl-white hover-scale-11">
+                            <i class="fas fa-tshirt"></i>
+                            Consult
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="column-center br-06 bg-white bx-s-10 width-30 height-24 m-2 m-lg-4 m-w-80">
+                <h5 class="mb-3 text-shadow-1 fs-16 cl-chocolated">
+                    <i class="fab fa-shopify"></i>
+                    Accessories
+                </h5>
+                <p class="text-muted fs-085 px-3">
+                    Explore our carefully curated selection of accessories that will perfectly complement your look. From elegant jewelry to functional bags, each piece is designed to elevate your personal style.
+                    Our quality leather belts add a touch of sophistication to every outfit, while our scarves and wraps bring a pop of color and texture to your ensemble.
+                    Do not underestimate the impact of a well-chosen watch. Our collection offers a range of styles, from timeless classics to contemporary designs.
+                    For those who like a bit of flair, our hats and caps provide a touch of personality to any outfit.
+
+                    <br><br>
+                    Explore our boutique today and discover how our accessories can transform your look.
+                </p>
+                <div class="center">
+                    <a href="/accessories">
+                        <button class="bg-chocolated br-06 bx-s-10 py-2 out-n border-0 px-4 fs-12 f-w-b cl-white hover-scale-11">
+                            <i class="fab fa-shopify"></i>
+                            Our accessories
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- partenaire -->
+    <section class="mb-6 d-none">
+        <h3 class="ml-3 ml-lg-5 text-muted mb-4 f-w-b text-shadow-1 fs-m1-095" style="font-size: 2.2rem;">
+            Our Partenaire
+        </h3>
+        <div class="center">
+            <a href="#">
+                <img src="" class="width-20 height-12 br-06 bx-s-2 m-w-90 hover-bx-s-10" alt="">
+            </a>
+        </div>
+    </section>
+
+    <!-- contacts et adresse -->
+    <section class="mb-12">
+        <div class="center">
+            <h5 class="fs-16 text-shadow-1 mb-4 py-3 text-white px-5 gr-blue br-06">
+                Our Store adress
+            </h5>
+        </div>
+        <div class="center">
+            <div class="bx-s-10 br-06 bg-white p-3 p-lg-5 w-80 m-w-90">
+                <h4 class="text-center f-w-b text-muted mb-3">
+                    <img src="/website/m19.png" class="width-2 height-2" alt="">
+                    United States
+                </h4>
+                <div class="wrap mb-4">
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Alabama</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Alaska</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Arizona</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Arkansas</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">California</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Colorado</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Connecticut</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Delaware</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Florida</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Georgia</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Hawaii</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Idaho</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Illinois</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Indiana</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Iowa</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Kansas</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Kentucky</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Louisiana</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Maine</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Maryland</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Massachusetts</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Michigan</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Minnesota</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Mississippi</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Missouri</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Montana</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Nebraska</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Nevada</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">New Hampshire</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">New Jersey</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">New Mexico</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">New York</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">North Carolina</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">North Dakota</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Ohio</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Oklahoma</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Oregon</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Pennsylvania</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Rhode Island</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">South Carolina</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">South Dakota</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Tennessee</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Texas</div>
+                    <div class="m-2 m-lg-4 text-muted f-w-b fs-095 op-05" style="font-style: italic;">Utah</div>                                        
+                </div>
+                <h3 class="text-center f-w-b text-muted mb-4 text-shadow-1">
+                    Another Country Store
+                </h3>
+                <div>
+                    <li class="mb-2 fs-14 text-muted">
+                        Asia
+                    </li>
+                    <li class="mb-2 fs-14 text-muted">
+                        Europe
+                    </li>
+                    <li class="mb-2 fs-14 text-muted">
+                        Africa
+                    </li>
+                    <li class="mb-2 fs-14 text-muted">
+                        North America
+                    </li>
+                    <li class="mb-2 fs-14 text-muted">
+                        South America
+                    </li>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- footer -->
+    <footer>
+        <%- include("./footer.html") %>
+    </footer>
+</body>
+</html>

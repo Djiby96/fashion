@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!-- my-css -->
+    <link rel="stylesheet" href="/my-css/navigation.css">
+
+    <!-- media querie -->
+    <link rel="stylesheet" href="/media-querie/mq_navigation.css">
+
+    <!-- boostrap js -->
+    <script defer src="/boostrap-js-4.5.0/jquery-3.4.1.min.js"></script>
+    <script defer src="/boostrap-js-4.5.0/bootstrap.min.js"></script>
+
+    <!-- my-js -->
+    <script defer src="/my-js/Cookie.js"></script>
+    <script defer src="/my-js/navigation.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-black bx-s-10 py-4">
+        <a class="navbar-brand cl-white" href="/">
+            <img src="/logo/l1.jpg" class="width-2 height-2 bx-s-10 m-1 m-lg-2 cs-p rounded" alt="">
+            <span class="f-w-b fs-12">Beauty & Fashion</span>
+        </a>
+
+        <button class="navbar-toggler bg-white bx-s-10" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto">
+            <li class="nav-item dropdown mx-2">
+                <span class="nav-link dropdown-toggle fs-095 cl-white f-w-b t-d-u" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Men's
+                </span>
+                <div class="dropdown-menu fs-09 pt-3" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item cl-black mb-1" href="/men/clothing">
+                        <i class="fas fa-tshirt"></i>
+                        Clothing
+                    </a>
+                    <a class="dropdown-item cl-black" href="/men/shoes">
+                        <i class="fas fa-shoe-prints"></i>
+                        Shoes
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item dropdown mx-2">
+                <span class="nav-link dropdown-toggle t-d-u fs-095 cl-white f-w-b" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Women's
+                </span>
+                <div class="dropdown-menu fs-09 pt-3 text-muted" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item cl-black mb-1" href="/women/clothing">
+                        <i class="fas fa-tshirt"></i>
+                        Clothing
+                    </a>
+                    <a class="dropdown-item cl-black" href="/women/shoes">
+                        <i class="fas fa-shoe-prints"></i>
+                        Shoes
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item mx-2">
+                <a class="nav-link fs-095 cl-white hover-cl-blue f-w-b t-d-u" href="/child-baby">
+                    Child & Baby
+                </a>
+              </li>
+            <li class="nav-item mx-2">
+                <a class="nav-link fs-095 cl-white hover-cl-blue f-w-b t-d-u" href="/accessories">
+                    Accessories
+                </a>
+            </li>
+            </ul>
+
+            <div class="center" id="number_link">
+                <div>    
+                    <img src="/logo/f.jpg" class="width-2 height-2 bx-s-10 m-1 cs-p" alt="">
+                    <img src="/logo/w.jpg" class="width-2 height-2 bx-s-10 m-1 cs-p" alt="">
+                    <img src="/logo/i.jpg" class="width-2 height-2 bx-s-10 m-1 cs-p br-08" alt="">  
+                    <img src="/logo/t.jpg" class="width-2 height-2 bx-s-10 m-1 cs-p" alt="">
+                    <img src="/logo/tt.jpg" class="width-2 height-2 bx-s-10 m-1 cs-p br-08" alt="">
+
+                <a href="/espace-admin/ajouter-produit" class="d-none" id="link_admin">
+                    <i class="fas fa-user-circle cl-white text-shadow-1 mr-3 mt-1 fs-2" title="se connecter"></i>
+                </a> 
+            </div>
+        </div>
+    </nav>
+</body>
+</html>

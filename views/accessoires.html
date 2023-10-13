@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="handbags, computer bags, backpacks, pencil cases, suitcases, watches-glasses, pouches, satchels, bracelets, chains, jewelry, wallets, coin purses.">
+    <link rel="icon" href="/logo/l1.jpg" type="image/jpg">
+    <title>Accessories for women's and men's</title>
+
+    <!-- URL QUERY STRING -->
+    <script defer src="/my-js/URLQueryString.js"></script>
+    
+    <!-- my-js -->
+    <script defer src="/my-js/accessoires.js"></script>
+
+    <!-- boostrap css -->
+    <link rel="stylesheet" href="/bootstrap-css-4.5.0/bootstrap.min.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="/fontawesome_5.15.4/css/all.css">
+
+    <!-- my-templates-css -->
+    <link rel="stylesheet" href="/my-templates-css/globalCss.css">
+
+    <!-- my-css -->
+    <link rel="stylesheet" href="/my-css/accessoires.css">
+
+    <!-- media-querie -->
+    <link rel="stylesheet" href="/media-querie/mq_accessoires.css">
+</head>
+<body>
+
+    <!-- navbar -->
+    <header>
+        <%- include("./navigation.html") %>
+    </header>
+
+    <!-- title page -->
+    <section class="my-5">
+        <div class="f-w-b fs-12 ml-3 bx-s-10 text-white clip-point-2 text-center rounded py-2 px-5 width-mc bg-primary" id="title_page">
+            Our accessories
+        </div>
+    </section>
+
+    <!-- search options and product -->
+    <section class="mb-5">
+        <div class="d-flex justify-content-end mb-2">
+            <div class="wrap justify-content-end mx-2 mr-lg-5">
+                <select name="gender" id="sg" class="mr-2 width-8 text-center f-w-b br-06 fs-075 cs-p text-muted mb-2" style="height: 1.5rem; border: 2.5px solid black;">
+                    <option value="" class="text-center">Gender</option>
+                    <option value="men" class="text-center">Men</option>
+                    <option value="women" class="text-center">Women</option>
+                    <option value="men-women" class="text-center">Men & Women</option>
+                    <option value="child-baby" class="text-center">Child-baby</option>
+                </select>
+                <select name="type" id="st" class="mr-2 width-8 text-center f-w-b br-06 fs-075 cs-p text-muted mb-2" style="height: 1.5rem; border: 2.5px solid black;">
+                    <option value="" class="text-center">type of accessories</option>
+                    <option value="suitcases" class="text-center">suitcases</option>
+                    <option value="hair" class="text-center">hair</option>
+                    <option value="perfumes" class="text-center">perfumes</option>
+                    <option value="belts" class="text-center">belts</option>
+                    <option value="backpacks" class="text-center">backpacks</option>
+                    <option value="handbags" class="text-center">handbags</option>
+                    <option value="childrens-toys" class="text-center">children's toys</option>
+                    <option value="computer-bags" class="text-center">computer bags</option>
+                    <option value="glasses/watches" class="text-center">glasses/watches</option>
+                    <option value="bracelets/chains/jewelry" class="text-center">bracelets/chains/jewelry</option>
+                    <option value="wallets/purses" class="text-center">wallets/purses</option>
+                    <option value="pockets-saddlebags-pencil-cases" class="text-center">pockets/saddlebags/pencil cases</option>
+                    <option value="others" class="text-center">others</option>                    
+                </select>
+                <select name="price" id="sp" class="br-06 width-8 fs-075 f-w-b cs-p text-muted" style="height: 1.5rem; border: 2.5px solid black;">
+                    <option value="" class="text-center">price</option>
+                    <option value="asc" class="text-center">less expensive</option>
+                    <option value="desc" class="text-center">more expensive</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- products and pagination -->
+        <div class="column-center">
+            
+           <%if(products.length >=1){%>
+                <div class="center mb-4">
+                    <%products.forEach((product) =>{%>
+                        <a href="<%=product.affiliate_link%>" title="<%=product.title%>" class="link_product width-13 height-18 bx-s-2 hover-bx-s-10 m-2 m-lg-3 br-06 m-w-95 t-d-n">
+                            <div class="center">
+                                <img src="<%=product.url_img%>" alt="<%=product.title%>" title="<%=product.title%>" class="imgs_product height-11 mb-2 br-06" style="max-width: 100% !important;">
+                            </div>
+                            <div class="product_title f-w-b text-muted fs-07 ellipsis-2 mb-3 px-2">
+                                <%=product.title%>
+                            </div>
+                            <h5 class="center">
+                                <%if(product.price > 0){%>
+                                    <span class="py-2 px-4 rounded bx-s-6 text-white fs-075 bg-primary"><%=product.price%> $</span>
+                                <%}else{%>
+                                    <span class="py-2 px-4 rounded bx-s-6 text-white fs-075 bg-primary">price depending size</span>
+                                <%}%>
+                            </h5>
+                        </a>
+                    <%})%>
+                </div>
+           <%}else{%>
+                <div class="center text-muted f-w-b fs-1 mt-5">
+                    AUCUN PRODUIT TROUVEE
+                </div>
+           <%}%>
+
+            <div>
+                <%- include("./pagination.html") %>
+            </div>
+        </div>
+    </section>
+
+    <!-- services -->
+    <section>
+        <%- include("./service.html") %>
+    </section>
+
+
+    <!-- footer -->
+    <footer>
+        <%- include("./footer.html") %>
+    </footer>
+</body>
+</html>
