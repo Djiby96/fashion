@@ -50,6 +50,7 @@ var AddProduct = {
             var R = "START TRANSACTION;" + Rp + ";" + Ri + ";" + Rc + ";COMMIT";
             con.query(R, D, (err, rs) =>{
                 if(err){
+                    console.log(err);
                     res.redirect("/espace-admin/ajouter-produit");
                 }else{
                     req.flash("message", "success/Vente ajoutée avec succès.")
