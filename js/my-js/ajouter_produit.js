@@ -8,25 +8,25 @@
 */
 
 // 1
-var button_img = document.getElementById("button_img");
-var input_file = document.getElementById("input_file");
-button_img.addEventListener("click", () =>{
-    input_file.click();
-})
+// var button_img = document.getElementById("button_img");
+// var input_file = document.getElementById("input_file");
+// button_img.addEventListener("click", () =>{
+//     input_file.click();
+// })
 
-// 2
-var text_imgs_select = document.getElementById("text_imgs_select");
-input_file.addEventListener("change", () =>{
-    var files = input_file.files
-    text_imgs_select.classList.add("f-w-b");
-    if(files.length >= 1){
-        text_imgs_select.textContent = `${files.length} photos choisies`
-        text_imgs_select.style.setProperty("color", "green", "important");
-    }else{
-        text_imgs_select.textContent = `Aucune photos choisies`
-        text_imgs_select.style.setProperty("color", "red", "important");
-    }
-})
+// // 2
+// var text_imgs_select = document.getElementById("text_imgs_select");
+// input_file.addEventListener("change", () =>{
+//     var files = input_file.files
+//     text_imgs_select.classList.add("f-w-b");
+//     if(files.length >= 1){
+//         text_imgs_select.textContent = `${files.length} photos choisies`
+//         text_imgs_select.style.setProperty("color", "green", "important");
+//     }else{
+//         text_imgs_select.textContent = `Aucune photos choisies`
+//         text_imgs_select.style.setProperty("color", "red", "important");
+//     }
+// })
 
 // 3
 var cp = document.getElementById("cp"),

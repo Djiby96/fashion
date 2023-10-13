@@ -5,7 +5,8 @@
 */
 
 var Files = require("./Files.js"),
-    con = require("./MySQL.js");
+    con = require("./MySQL.js"),
+    Utilitaire = require("./Utilitaire.js");
 
 var AddProduct = {
     // 1
@@ -25,22 +26,23 @@ var AddProduct = {
         if(!cc && "x"=="y"){
             res.redirect("/connexion-admin")
         }else{
-            var b = req.body,
-                files = req.files;
+            var b = req.body;
+            console.log(b);
 
             //download files
-            var img_data_table = Files.upload(files, "./images/product/");
+            // var img_data_table = Files.upload(files, "./images/product/");
+            var number = Utilitaire.getReference();
             
             // table product
-            var Tp = [img_data_table[2], b.title, b.price, b.gender, b.type || '', b.partenaire, b.affiliate_link, b.description];
+            var Tp = [number, b.title, b.price, b.gender, b.type || '', b.partenaire, b.affiliate_link, b.description];
             var Rp = `INSERT INTO product(number, title, price, gender, type, partenaire, affiliate_link, description) VALUES (?)`;
 
             // table images
-            var Ti = img_data_table;
+            var Ti = [b.url_img, 1, number];
             var Ri = `INSERT INTO images VALUES (?)`
 
             // table categorie
-            var Tc = [b.category, "", img_data_table[2]]
+            var Tc = [b.category, "", number]
             var Rc = `INSERT INTO category VALUES (?)`
             if(b.gender == 'child-baby'){
                 Tc[1] = b.sub_category; 
