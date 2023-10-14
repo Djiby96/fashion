@@ -27,14 +27,13 @@ var AddProduct = {
             res.redirect("/connexion-admin")
         }else{
             var b = req.body;
-            console.log(b);
 
             //download files
             // var img_data_table = Files.upload(files, "./images/product/");
             var number = Utilitaire.getReference();
             
             // table product
-            var Tp = [number, b.title, b.price, b.gender, b.type || '', b.partenaire, b.affiliate_link, b.description];
+            var Tp = [number, b.title, b.price || 0, b.gender, b.type || '', b.partenaire, b.affiliate_link, b.description];
             var Rp = `INSERT INTO product(number, title, price, gender, type, partenaire, affiliate_link, description) VALUES (?)`;
 
             // table images

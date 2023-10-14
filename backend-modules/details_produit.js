@@ -1,12 +1,20 @@
 /*
     1. Afficher details vente
 */
+
 var con = require("./MySQL"),
-    fs = require("fs");
+    fs = require("fs"),
+    geoip = require('geoip-lite');
 
 var DetailsProduct = {
     // 1
     page : (req, res) =>{
+        var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+        ip = ip.split(":").pop();
+
+        // location
+        var geo = geoip.lookup(ip) || false;
+
         var gender = req.params.gender,
             category = req.params.category,
             title_number = req.params.title_number,
@@ -91,6 +99,7 @@ var DetailsProduct = {
                         res.redirect("/");
                     }else{
                         res.render("details_produit.html", {
+                            countryCode: geo.country,
                             gender: gender,
                             category: category,
                             title_number: title_number,

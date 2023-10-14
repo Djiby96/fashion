@@ -2,12 +2,13 @@
     .desc-item{
         left: 5% !important;
     }
+    .desc-item p{
+        font-size: 1.2rem !important;
+    }
    
 }
 @media screen and (min-width:401px) and (max-width:700px){
-    .desc-item p{
-        font-size: 0.95rem !important;
-    }
+    
 }
 @media screen and (min-width:701px) and (max-width:1000px){
 }

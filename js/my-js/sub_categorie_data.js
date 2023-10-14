@@ -2,8 +2,11 @@ var SubCategorieData = {
     men:{
         clothing : new Map([
             ["tanks", "tanks"],
+            ["shorts", "shorts"],
+            ["pants", "pants"],
+            ["jeans", "jeans"],
+            ["joggers", "joggers"],
             ["swimsuits/panties", "swimsuits-panties"],
-            ["pants/jeans/joggers", "pants-jeans-joggers"],
             ["t-shirts/polos/lacoste", "t-shirts-polos-lacoste"],
             ["sweaters/cardigans/coats/jackets", "sweaters-cardigans-coats-jackets"],
             ["boxers/briefs", "boxers-briefs"],
@@ -25,10 +28,12 @@ var SubCategorieData = {
     women:{
         clothing : new Map([
             ["veil", "veil"],
+            ["pants", "pants"],
+            ["jeans", "jeans"],
+            ["joggers", "joggers"],
             ["tank top", "tank-top"],
             ["skirt/dress", "skirt-dress"],
             ["swimsuits/panties", "swimsuits-panties"],
-            ["pants/jeans/joggers", "pants-jeans-joggers"],
             ["t-shirts/polos/lacoste", "t-shirts-polos-lacoste"],
             ["sweaters/cardigans/coats/jackets", "sweaters-cardigans-coats-jackets"],
             ["jumpsuits/rompers/overalls", "jumpsuits-rompers-overalls"],
