@@ -74,6 +74,7 @@ var ManWoman = {
             var RF = R + ";" + RS;
             con.query(RF, (err, rs) =>{
                 if(err){
+                    console.log(err);
                     res.redirect("/");
                 }else{
                     var products = rs[0];

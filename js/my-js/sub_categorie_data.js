@@ -1,16 +1,17 @@
 var SubCategorieData = {
     men:{
         clothing : new Map([
+            ["suit", "suit"],
             ["tanks", "tanks"],
+            ["shirt", "shirt"],
             ["shorts", "shorts"],
             ["pants", "pants"],
             ["jeans", "jeans"],
             ["joggers", "joggers"],
-            ["swimsuits/panties", "swimsuits-panties"],
+            ["sock/hosiery", "sock-hosiery"],
+            ["boxers/briefs", "boxers-briefs"],
             ["t-shirts/polos/lacoste", "t-shirts-polos-lacoste"],
             ["sweaters/cardigans/coats/jackets", "sweaters-cardigans-coats-jackets"],
-            ["boxers/briefs", "boxers-briefs"],
-            ["shirt/suit", "shirt-suit"],
             ["jallaba/sabador/tunic/fabric/bazin", "jallaba-sabador-tunic-fabric-bazin"],
             ["others", "others"]
             
@@ -27,18 +28,24 @@ var SubCategorieData = {
     },
     women:{
         clothing : new Map([
+            ["bra", "bra"],
             ["veil", "veil"],
-            ["pants", "pants"],
+            ["suit", "suit"],
+            ["shirt", "shirt"],
             ["jeans", "jeans"],
+            ["pants", "pants"],
+            ["tights", "tights"],
+            ["shorts", "shorts"],
             ["joggers", "joggers"],
             ["tank top", "tank-top"],
+            ["pajamas", "pajamas"],
+            ["leggings", "leggings"],
             ["skirt/dress", "skirt-dress"],
+            ["sock/hosiery", "sock-hosiery"],
             ["swimsuits/panties", "swimsuits-panties"],
             ["t-shirts/polos/lacoste", "t-shirts-polos-lacoste"],
-            ["sweaters/cardigans/coats/jackets", "sweaters-cardigans-coats-jackets"],
             ["jumpsuits/rompers/overalls", "jumpsuits-rompers-overalls"],
-            ["boxers/briefs/bra", "boxers-briefs-bra"],
-            ["shirt/suit", "shirt-suit"],
+            ["sweaters/cardigans/coats/jackets", "sweaters-cardigans-coats-jackets"],
             ["abaya/jallaba/fabric/bazin", "abaya-jallaba-fabric-bazin"],
             ["others", "others"]
         ]),
