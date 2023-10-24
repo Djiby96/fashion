@@ -12,14 +12,25 @@ var ManWoman = {
         var gender = req.params.gender,
             category = req.params.category;
 
-        if((gender != "men" && gender != "women") || (category != "clothing" && category != "shoes")){
+        if((gender != "men" && gender != "women" && gender != "boy" && gender != "girl" && gender != "baby") || (category != "clothing" && category != "shoes" && category != "accessories")){
             res.redirect("/");
         }else{
             var R = `SELECT product.*, category, sub_category, url_img, number_img, REPLACE(FORMAT(price, 0), ',', ' ') AS 'price_format', `+
             `REPLACE(title, ' ', '-') AS 'title_concat' FROM product INNER JOIN category USING(number) INNER JOIN images USING(number) ` +
-            `WHERE (gender='${gender}' || gender='men-women') AND category='${category}' `
+            `WHERE category='${category}' `
 
-            var RS = `SELECT COUNT(*) FROM product INNER JOIN category USING(number) WHERE (gender='${gender}' || gender='men-women') AND category='${category}' `
+            var RS = `SELECT COUNT(*) FROM product INNER JOIN category USING(number) WHERE category='${category}' `
+
+            if(gender == "men" || gender == "women"){
+                R = R + `AND (gender='${gender}' || gender='men-women') `
+                RS = RS + `AND (gender='${gender}' || gender='men-women') `
+            }else if(gender == "boy" || gender == "girl"){
+                R = R + `AND (gender='${gender}' || gender='boy-girl') `
+                RS = RS + `AND (gender='${gender}' || gender='boy-girl') `
+            }else{
+                R = R + `AND gender='${gender}' `
+                RS = RS + `AND gender='${gender}' `
+            }
 
     
             // if(gender == "men" && category =="clothing"){
@@ -37,7 +48,8 @@ var ManWoman = {
             // get query
             var page = parseInt(req.query.page) || 1,
                 type = req.query.type,
-                price_order = req.query.price;
+                price_order = req.query.price,
+                sex = req.query.sex;
 
             if(price_order){
                 R = R + `AND price !=0 `;
@@ -49,25 +61,13 @@ var ManWoman = {
             if(type){
                 R = R + `AND MATCH(type) AGAINST('${type}') `
                 RS = RS + `AND MATCH(type) AGAINST('${type}') `
-
-                // products.forEach((product, index) =>{
-                //     if(product.type != type){
-                //         delete products[index];
-                //     }
-                // })
             }
 
-            // pagination
-            // var N = 50,
-            //     URL = req._parsedOriginalUrl,
-            //     pagination_link = pagination.createPaginationLink(N, page, URL, 50);
- 
-            // res.render("man_woman.html", {
-            //     gender: gender,
-            //     category: category,
-            //     products: products,
-            //     pagination_link: pagination_link
-            // })
+            if(sex){
+                R = R + `AND (sub_category='${sex}' || sub_category='boy-girl') `
+                RS = RS + `AND (sub_category='${sex}' || sub_category='boy-girl') `  
+            }
+
 
             R = R + `ORDER BY ` + order_price + `date DESC LIMIT ${(page - 1)*100}, 100`
 
@@ -88,7 +88,7 @@ var ManWoman = {
                         pagination_link = pagination.createPaginationLink(N, page, URL, 100);
                 
                     //render
-                    res.render("man_woman.html", {
+                    res.render("products.html", {
                         gender: gender,
                         category: category,
                         products: products,

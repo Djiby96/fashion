@@ -15,17 +15,17 @@
 */
 
 // 1
-const sc = document.getElementById("sc");
-sc.addEventListener("change", () =>{
-    var value = sc.value;
-    if(value){
-        var URL_REDIRECT = URLQueryString.changeURLParameters("category", value)
-    }else{
-        var URL_REDIRECT = URLQueryString.deleteParameter("category")
-    }
+// const sc = document.getElementById("sc");
+// sc.addEventListener("change", () =>{
+//     var value = sc.value;
+//     if(value){
+//         var URL_REDIRECT = URLQueryString.changeURLParameters("category", value)
+//     }else{
+//         var URL_REDIRECT = URLQueryString.deleteParameter("category")
+//     }
 
-    window.location.href = URL_REDIRECT; 
-})
+//     window.location.href = URL_REDIRECT; 
+// })
 
 // 2
 const ss = document.getElementById("ss");
@@ -55,17 +55,17 @@ sp.addEventListener("change", () =>{
 
 
 // 4
-var check_category_query = URLQueryString.checkParameter("category");
-if(check_category_query){
-    var options = sc.children;
-    var selected = document.createAttribute("selected");
-    for(let i=0; i<options.length; i++){
-        var sc_value = options[i].getAttribute("value");
-        if(sc_value == check_category_query){
-            options[i].setAttributeNode(selected);
-        }
-    }
-}
+// var check_category_query = URLQueryString.checkParameter("category");
+// if(check_category_query){
+//     var options = sc.children;
+//     var selected = document.createAttribute("selected");
+//     for(let i=0; i<options.length; i++){
+//         var sc_value = options[i].getAttribute("value");
+//         if(sc_value == check_category_query){
+//             options[i].setAttributeNode(selected);
+//         }
+//     }
+// }
 
 // 5
 var check_sex_query = URLQueryString.checkParameter("sex");

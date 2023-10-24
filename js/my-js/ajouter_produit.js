@@ -35,7 +35,10 @@ var cp = document.getElementById("cp"),
     tvh = document.getElementById("tvh"),
     tch = document.getElementById("tch"),
     tvf = document.getElementById("tvf"),
-    ta = document.getElementById("ta"),
+    taf = document.getElementById("taf"),
+    tah = document.getElementById("tah"),
+    tab = document.getElementById("tab"),
+    tag = document.getElementById("tag"),
     ss = document.getElementById("ss");
 
 [cp, cv].forEach((categorie) =>{
@@ -48,9 +51,8 @@ var cp = document.getElementById("cp"),
             container_type.removeChild(container_type_child)
         }
 
-        if(y == 'accessories'){
-            container_type.appendChild(ta);
-        }else if(x == 'child-baby'){
+
+        if(x == 'baby'){
             container_type.appendChild(ss);
         }else if((x == 'men' || x== 'men-women') && y == 'clothing'){
             container_type.appendChild(tvh);
@@ -60,6 +62,22 @@ var cp = document.getElementById("cp"),
             container_type.appendChild(tcf);
         }else if((x == 'men' || x=='men-women') && y == 'shoes'){
             container_type.appendChild(tch);
+        }else if((x == 'men' || x== 'men-women') && y == 'accessories'){
+            container_type.appendChild(tah);
+        }else if(x == 'women' && y == 'accessories'){
+            container_type.appendChild(taf);
+        }else if((x == 'boy' || x== 'boy-girl') && y == 'clothing'){
+            container_type.appendChild(tvh);
+        }else if((x == 'boy' || x== 'boy-girl') && y == 'shoes'){
+            container_type.appendChild(tch);
+        }else if((x == 'boy' || x== 'boy-girl') && y == 'accessories'){
+            container_type.appendChild(tab);
+        }else if(x == 'girl' && y == 'clothing'){
+            container_type.appendChild(tvf);
+        }else if(x == 'girl' && y == 'shoes'){
+            container_type.appendChild(tcf);
+        }else if(x == 'girl' && y == 'accessories'){
+            container_type.appendChild(tag);
         }else{
             // nothing
         }

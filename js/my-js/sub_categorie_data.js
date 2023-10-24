@@ -24,6 +24,24 @@ var SubCategorieData = {
             ["sandals/open-toe shoes/slippers/espadrilles", "sandals-open-toe-shoes-slippers-espadrilles"],
             ["others", "others"]
             
+        ]),
+        accessories: new Map([
+            ["hair", "hair"],
+            ["belts", "belts"],
+            ["perfumes", "perfumes"],
+            ["handbags", "handbags"],
+            ["suitcases", "suitcases"],
+            ["backpacks", "backpacks"],
+            ["skin-care", "Skin Care"],
+            ["hats-caps", "hats/caps"],
+            ["computer-bags", "computer bags"],
+            ["wallets-purses", "wallets/purses"],
+            ["gloves-mittens", "gloves/mittens"],
+            ["childrens-toys", "children's toys"],
+            ["glasses-watches", "glasses/watches"],
+            ["playstation-games", "playstation/games"],
+            ["pockets-saddlebags-pencil-cases", "pockets/saddlebags/pencil cases"],
+            ["others", "others"]
         ])
     },
     women:{
@@ -37,7 +55,6 @@ var SubCategorieData = {
             ["tights", "tights"],
             ["shorts", "shorts"],
             ["joggers", "joggers"],
-            ["tank top", "tank-top"],
             ["pajamas", "pajamas"],
             ["leggings", "leggings"],
             ["skirt/dress", "skirt-dress"],
@@ -58,28 +75,53 @@ var SubCategorieData = {
             ["sandals/open-toe shoes/slippers/espadrilles", "sandals-open-toe-shoes-slippers-espadrilles"],
             ["others", "others"]
             
+        ]),
+        accessories: new Map([
+            ["hair", "hair"],
+            ["belts", "belts"],
+            ["makeup", "makeup"],
+            ["perfumes", "perfumes"],
+            ["handbags", "handbags"],
+            ["headbands", "headbands"],
+            ["suitcases", "suitcases"],
+            ["backpacks", "backpacks"],
+            ["skin-care", "Skin Care"],
+            ["hats-caps", "hats/caps"],
+            ["computer-bags", "computer bags"],
+            ["wallets-purses", "wallets/purses"],
+            ["childrens-toys", "children's toys"],
+            ["gloves-mittens", "gloves/mittens"],
+            ["glasses-watches", "glasses/watches"],
+            ["playstation-games", "playstation/games"],
+            ["bracelets-chains-jewelry", "bracelets/chains/jewelry"],
+            ["pockets-saddlebags-pencil-cases", "pockets/saddlebags/pencil cases"],
+            ["others", "others"]
         ])
-    }, 
-
-    child_baby: new Map([
-        ["clothing", "Clothing"],
-        ["shoes", "Shoes"],
-        ["accessories", "accessories"]
-    ]),
-
-    accessories: new Map([
-        ["suitcases", "suitcases"],
-        ["hair", "hair"],
-        ["perfumes", "perfumes"],
-        ["belts", "belts"],
-        ["backpacks", "backpacks"],
-        ["handbags", "handbags"],
-        ["childrens-toys", "children's toys"],
-        ["computer-bags", "computer bags"],
-        ["glasses-watches", "glasses/watches"],
-        ["pockets-saddlebags-pencil-cases", "pockets/saddlebags/pencil cases"],
-        ["bracelets-chains-jewelry", "bracelets/chains/jewelry"],
-        ["wallets-purses", "wallets/purses"],
-        ["others", "others"]
-    ])
+    },
+    boy:{
+        accessories: new Map([
+            ["belts", "belts"],
+            ["backpacks", "backpacks"],
+            ["hats-caps", "hats/caps"],
+            ["gloves-mittens", "gloves/mittens"],
+            ["childrens-toys", "children's toys"],
+            ["glasses-watches", "glasses/watches"],
+            ["playstation-games", "playstation/games"],
+            ["others", "others"]
+        ])
+    },
+    girl:{
+        accessories: new Map([
+            ["belts", "belts"],
+            ["makeup", "makeup"],
+            ["backpacks", "backpacks"],
+            ["hats-caps", "hats/caps"],
+            ["gloves-mittens", "gloves/mittens"],
+            ["childrens-toys", "children's toys"],
+            ["glasses-watches", "glasses/watches"],
+            ["playstation-games", "playstation/games"],
+            ["bracelets-chains-jewelry", "bracelets/chains/jewelry"],
+            ["others", "others"]
+        ])
+    }
 }

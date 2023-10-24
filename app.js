@@ -37,10 +37,9 @@ app.listen(port, () => console.log(`APP MODE-BEAUTE RUNNING ON PORT ${port}`))
 // Export backend-modules for app
 var Accueil = require("./backend-modules/accueil.js"),
     AdminConnect = require("./backend-modules/connexion_admin.js"),
-    ManWoman = require("./backend-modules/man_woman.js"),
+    Products = require("./backend-modules/products.js"),
     flashMessage = require("./backend-modules/flashMessage.js"),
     Accessory = require("./backend-modules/accessoires.js"),
-    ChildBaby = require("./backend-modules/enfant_bebe.js"),
     AddProduct = require("./backend-modules/ajouter_produit.js"),
     DetailsProduct = require("./backend-modules/details_produit.js"),
     Produits = require('./backend-modules/produits.js');
@@ -56,8 +55,6 @@ app.get("/", Accueil.page_accueil)
 
 app.get("/accessories", Accessory.page)
 
-app.get("/child-baby", ChildBaby.page)
-
 app.get("/connexion-admin", AdminConnect.page_connexion_admin)
 
 app.get("/espace-admin/ajouter-produit",  AddProduct.page)
@@ -66,7 +63,7 @@ app.get("/espace-admin/produits",  Produits.page_produits)
 
 app.get("/espace-admin/produits/disable-produit-:numero",  Produits.disable_product)
 
-app.get("/:gender/:category", ManWoman.page)
+app.get("/:gender/:category", Products.page)
 
 app.get("/:gender/:category/:title_number", DetailsProduct.page)
 

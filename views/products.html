@@ -13,7 +13,7 @@
     <script defer src="/my-js/URLQueryString.js"></script>
 
     <!-- my-js -->
-    <script defer src="/my-js/man_woman.js"></script>
+    <script defer src="/my-js/products.js"></script>
 
     <!-- boostrap css -->
     <link rel="stylesheet" href="/bootstrap-css-4.5.0/bootstrap.min.css">
@@ -24,11 +24,8 @@
     <!-- my-templates-css -->
     <link rel="stylesheet" href="/my-templates-css/globalCss.css">
 
-    <!-- my-css -->
-    <link rel="stylesheet" href="/my-css/man_woman.css">
-
     <!-- media-querie -->
-    <link rel="stylesheet" href="/media-querie/mq_man_woman.css">
+    <link rel="stylesheet" href="/media-querie/mq_products.css">
 </head>
 <body>
     <!-- navbar -->
@@ -54,9 +51,23 @@
         <div class="d-flex justify-content-end mb-2">
             <div class="mr-4 mr-lg-5">
                 <div class="wrap">
-                    <select name="type" id="st" class="mr-2 width-8 text-center f-w-b br-06 fs-075 cs-p text-muted mb-2" style="height: 1.5rem; border: 2.5px solid black;">
-                        <!-- display type from js here -->
-                    </select>
+
+                    <%if(gender == 'men' || gender == 'women' || gender == 'boy' || gender == 'girl'){%>
+                        <select name="type" id="st" class="mr-2 width-8 text-center f-w-b br-06 fs-075 cs-p text-muted mb-2" style="height: 1.5rem; border: 2.5px solid black;">
+                            <!-- display type from js here -->
+                        </select>
+                    <%}else{%>
+                        <select name="type" id="st" class="d-none"></select>
+                    <%}%>
+
+                    <%if(gender == 'baby'){%>
+                        <select name="sex" id="ss" class="mr-2 width-8 text-center f-w-b br-06 fs-075 cs-p text-muted mb-2" style="height: 1.5rem; border: 2.5px solid black;">
+                            <option value="" class="text-center">Sex</option>
+                            <option value="boy" class="text-center">Boy's</option>
+                            <option value="girl" class="text-center">Girl's</option>
+                        </select>
+                    <%}%>
+
                     <select name="prix" id="sp" class="br-06 width-8 fs-075 f-w-b cs-p text-muted" style="height: 1.5rem; border: 2.5px solid black;">
                         <option value="" class="text-center">Price</option>
                         <option value="asc" class="text-center">less expensive</option>
@@ -81,16 +92,50 @@
                                 </div>
                                 <h5 class="center">
                                     <%if(product.price>0){%>
-                                        <%if(gender == 'men'){%>
+                                        <%if(gender == 'men' || gender == 'boy' || gender == 'baby'){%>
                                             <span class="py-2 px-4 rounded bx-s-6 text-white fs-075 bg-black"><%=product.price%> $</span>
                                         <%}else{%>
                                             <span class="py-2 px-4 rounded bx-s-6 text-white fs-075 bg-orange-woman"><%=product.price%> $</span>
                                         <%}%>
                                     <%}else{%>
-                                        <%if(gender == 'men'){%>
-                                            <span class="py-2 px-4 rounded bx-s-6 text-white fs-075 bg-black">price depending size</span>
+                                        <%if(gender == 'men' || gender == 'boy' || gender == 'baby'){%>
+                                            <span class="py-2 px-4 rounded bx-s-6 text-white fs-075 bg-black">
+                                                <i class="fas fa-eye"></i>
+                                            </span>
                                         <%}else{%>
-                                            <span class="py-2 px-4 rounded bx-s-6 text-white fs-075 bg-orange-woman">price depending size</span>
+                                            <span class="py-2 px-4 rounded bx-s-6 text-white fs-075 bg-orange-woman">
+                                                <i class="fas fa-eye"></i>
+                                            </span>
+                                        <%}%>
+                                    <%}%>
+                                </h5>
+                            </a>
+                        <%})%>
+                    <%}else if(category=='shoes'){%>
+                        <%products.forEach((product) =>{%>
+                            <a href="<%=product.affiliate_link%>" title="<%=product.title%>" class="link_product width-14 height-17 bx-s-2 hover-bx-s-10 m-2 m-lg-3 br-06 m-w-95 t-d-n">
+                                <div class="center">
+                                    <img src="<%=product.url_img%>" alt="<%=product.title%>" title="<%=product.title%>" class="imgs_product height-9 mb-2" style="max-width: 100% !important;">
+                                </div>
+                                <div class="product_title text-muted fs-075 ellipsis-2 mb-3 px-2">
+                                    <%=product.title%>
+                                </div>
+                                <h5 class="center">
+                                    <%if(product.price>0){%>
+                                        <%if(gender == 'men' || gender == 'boy' || gender == 'baby'){%>
+                                            <span class="py-2 px-4 rounded bx-s-6 text-white fs-075 bg-black"><%=product.price%> $</span>
+                                        <%}else{%>
+                                            <span class="py-2 px-4 rounded bx-s-6 text-white fs-075 bg-orange-woman"><%=product.price%> $</span>
+                                        <%}%>
+                                    <%}else{%>
+                                        <%if(gender == 'men' || gender == 'boy' || gender == 'baby'){%>
+                                            <span class="py-2 px-4 rounded bx-s-6 text-white fs-075 bg-black">
+                                                <i class="fas fa-eye"></i>
+                                            </span>
+                                        <%}else{%>
+                                            <span class="py-2 px-4 rounded bx-s-6 text-white fs-075 bg-orange-woman">
+                                                <i class="fas fa-eye"></i>
+                                            </span>
                                         <%}%>
                                     <%}%>
                                 </h5>
@@ -107,16 +152,20 @@
                                 </div>
                                 <h5 class="center">
                                     <%if(product.price>0){%>
-                                        <%if(gender == 'men'){%>
+                                        <%if(gender == 'men' || gender == 'boy' || gender == 'baby'){%>
                                             <span class="py-2 px-4 rounded bx-s-6 text-white fs-075 bg-black"><%=product.price%> $</span>
                                         <%}else{%>
                                             <span class="py-2 px-4 rounded bx-s-6 text-white fs-075 bg-orange-woman"><%=product.price%> $</span>
                                         <%}%>
                                     <%}else{%>
-                                        <%if(gender == 'men'){%>
-                                            <span class="py-2 px-4 rounded bx-s-6 text-white fs-075 bg-black">price depending size</span>
+                                        <%if(gender == 'men' || gender == 'boy' || gender == 'baby'){%>
+                                            <span class="py-2 px-4 rounded bx-s-6 text-white fs-075 bg-black">
+                                                <i class="fas fa-eye"></i>
+                                            </span>
                                         <%}else{%>
-                                            <span class="py-2 px-4 rounded bx-s-6 text-white fs-075 bg-orange-woman">price depending size</span>
+                                            <span class="py-2 px-4 rounded bx-s-6 text-white fs-075 bg-orange-woman">
+                                                <i class="fas fa-eye"></i>
+                                            </span>
                                         <%}%>
                                     <%}%>
                                 </h5>
