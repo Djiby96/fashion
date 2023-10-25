@@ -4,7 +4,8 @@
 
 var con = require("./MySQL"),
     pagination = require("./pagination"),
-    fs = require("fs");
+    fs = require("fs"),
+    describePage = require("./describePage");
 
 var ManWoman = {
     // 1
@@ -87,8 +88,10 @@ var ManWoman = {
                         URL = req._parsedOriginalUrl,
                         pagination_link = pagination.createPaginationLink(N, page, URL, 100);
                 
+                    var describe_page = describePage.get("/"+gender+"/"+category) || "Discover a world of fashion at Our store. We offer a carefully curated selection of stylish clothing and footwear for both men and women. From casual to formal, find your perfect look with us."; 
                     //render
                     res.render("products.html", {
+                        describe_page: describe_page,
                         gender: gender,
                         category: category,
                         products: products,
