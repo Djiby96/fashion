@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="<%=product.description%>">
+    <meta name="description" content="<%=product.title%>">
     <link rel="icon" href="/logo/l1.jpg" type="image/jpg">
     <title><%=product.title%></title>
 
@@ -73,10 +73,10 @@
                     <img src="<%=product.url_img%>" class="z-i-2 bg-white bx-s-10 w-100 h-100 bx-s-10 px-3" style="max-height: 36rem !important;" id="img_dt" alt="" title="<%=product.title%>">
                 </div>
             </div>
-            <div class="width-30 m-w-100">
-                <div class="mb-4 fs-14 text-shadow-1 text-muted op-08 f-w-b text-center ellipsis-2 px-2"><%=product.title%></div>
-                <h5 class="cl-orangered f-w-b ml-3 text-shadow-1 mb-4 fs-16" style="display: flex; justify-content: end;">
-                    <%if(product.price >0){%>
+            <div class="width-32 m-w-100">
+                <div class="mb-4 fs-14 text-shadow-1 text-muted op-08 f-w-b text-center px-2"><%=product.title%></div>
+                <h5 class="cl-orangered f-w-b ml-3 text-shadow-1 mb-5 fs-2 text-center">
+                    <%if(product.price>0){%>
                         <%=product.price%> $
                     <%}else{%>
                         Price depending size 
@@ -86,11 +86,15 @@
                         </a>
                     <%}%>
                 </h5>
-                <p class="fs-09 ls-015 text-muted m-w-95 mb-5 px-2" id="product_description">
-                    <%=product.description%>
+                <p class="fs-12 ls-015 text-muted m-w-95 mb-5 px-2" id="product_description">
+                    See all necessary informations for this product and purchase it from our store
+                    <a href="<%=product.affiliate_link%>" class="ml-2 cl-blue f-w-b fs-12 border-bottom text-shadow-1">
+                        <i class="fas fa-hand-point-right" aria-colcount="text-shadow-1 cl-blue f-w-b"></i>
+                        HERE.
+                    </a>
                 </p>
                 <div class="column-center"> 
-                    <p class="fs-085 f-w-b text-muted" cc="<%=countryCode%>" id="tn">
+                    <p class="fs-095 f-w-b text-muted" cc="<%=countryCode%>" id="tn">
                         
                     </p>
                     <a href="<%=product.affiliate_link%>" title="<%=product.title%>">
@@ -141,7 +145,7 @@
         <div class="column-center" style="margin-top: 3rem;">
             <h5 class="text-shadow-1 mb-3">Share this article with friend :</h5>
             <div class="horizontal-center">
-                <a href="https://m.facebook.com/sharer.php?u=https://beauty-fashion.onrender.com/<%=gender%>/<%=category%>/<%=title_number%>&text=<%=product.description%>" class="mx-2">
+                <a href="https://m.facebook.com/sharer.php?u=https://beauty-fashion.onrender.com/<%=gender%>/<%=category%>/<%=title_number%>&text=<%=product.title%>" class="mx-2">
                     <img src="/logo/f.jpg" alt="" class="width-3 height-3 bx-s-10 br-06">
                 </a>
                 <a href="https://wa.me/?text=https://beauty-fashion.onrender.com/<%=gender%>/<%=category%>/<%=title_number%> %0a%0a*<%=product.title%>*" class="mx-2">
