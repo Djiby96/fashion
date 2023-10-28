@@ -152,6 +152,13 @@ else if(pathname == "/baby/shoes"){
 else if(pathname == "/baby/accessories"){
     title_page.textContent = "Baby accessories";
     title_page.classList.add("bg-black");
+
+    st.insertAdjacentHTML('afterbegin', `<option value='' class='text-center'>Accessories type</option>`)
+
+    SubCategorieData.baby.accessories.forEach((value, key) =>{
+        sub_category.insertAdjacentHTML('beforeend', `<a href='/baby/accessories?type=${value}' class="py-2 px-3 text-white rounded bx-s-2 fs-095 ls-04 m-2 op-07 hover-bx-s-10 hover-op-1 bg-black">${key}</a>`)
+        st.insertAdjacentHTML('beforeend', `<option value='${value}' class='text-center'>${key}</option>`)
+    });
 }else{
     
 }

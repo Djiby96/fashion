@@ -39,45 +39,42 @@ var cp = document.getElementById("cp"),
     tah = document.getElementById("tah"),
     tab = document.getElementById("tab"),
     tag = document.getElementById("tag"),
+    ta_baby = document.getElementById("ta_baby"),
     ss = document.getElementById("ss");
 
 [cp, cv].forEach((categorie) =>{
     categorie.addEventListener("change", () =>{
         var x = cp.value,
             y = cv.value;
-    
-        var container_type_child = container_type.firstElementChild;
-        if(container_type_child){
-            container_type.removeChild(container_type_child)
-        }
-
+        
+        container_type.replaceChildren();    
 
         if(x == 'baby'){
-            container_type.appendChild(ss);
+            container_type.replaceChildren(ta_baby, ss);
         }else if((x == 'men' || x== 'men-women') && y == 'clothing'){
-            container_type.appendChild(tvh);
+            container_type.replaceChildren(tvh);
         }else if(x == 'women' && y == 'clothing'){
-            container_type.appendChild(tvf);
+            container_type.replaceChildren(tvf);
         }else if(x == 'women' && y == 'shoes'){
-            container_type.appendChild(tcf);
+            container_type.replaceChildren(tcf);
         }else if((x == 'men' || x=='men-women') && y == 'shoes'){
-            container_type.appendChild(tch);
+            container_type.replaceChildren(tch);
         }else if((x == 'men' || x== 'men-women') && y == 'accessories'){
-            container_type.appendChild(tah);
+            container_type.replaceChildren(tah);
         }else if(x == 'women' && y == 'accessories'){
-            container_type.appendChild(taf);
+            container_type.replaceChildren(taf);
         }else if((x == 'boy' || x== 'boy-girl') && y == 'clothing'){
-            container_type.appendChild(tvh);
+            container_type.replaceChildren(tvh);
         }else if((x == 'boy' || x== 'boy-girl') && y == 'shoes'){
-            container_type.appendChild(tch);
+            container_type.replaceChildren(tch);
         }else if((x == 'boy' || x== 'boy-girl') && y == 'accessories'){
-            container_type.appendChild(tab);
+            container_type.replaceChildren(tab);
         }else if(x == 'girl' && y == 'clothing'){
-            container_type.appendChild(tvf);
+            container_type.replaceChildren(tvf);
         }else if(x == 'girl' && y == 'shoes'){
-            container_type.appendChild(tcf);
+            container_type.replaceChildren(tcf);
         }else if(x == 'girl' && y == 'accessories'){
-            container_type.appendChild(tag);
+            container_type.replaceChildren(tag);
         }else{
             // nothing
         }

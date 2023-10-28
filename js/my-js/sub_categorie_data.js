@@ -37,7 +37,6 @@ var SubCategorieData = {
             ["computer bags", "computer-bags"],
             ["wallets/purses", "wallets-purses"],
             ["gloves/mittens", "gloves-mittens"],
-            ["children's toys", "childrens-toys"],
             ["glasses/watches", "glasses-watches"],
             ["playstation/games", "playstation-games"],
             ["pockets/saddlebags/pencil cases", "pockets-saddlebags-pencil-cases"],
@@ -89,7 +88,6 @@ var SubCategorieData = {
             ["hats/caps", "hats-caps"],
             ["computer bags", "computer-bags"],
             ["wallets/purses", "wallets-purses"],
-            ["children's toys", "childrens-toys"],
             ["gloves/mittens", "gloves-mittens"],
             ["glasses/watches", "glasses-watches"],
             ["playstation/games", "playstation-games"],
@@ -122,6 +120,26 @@ var SubCategorieData = {
             ["playstation/games", "playstation-games"],
             ["bracelets/chains/jewelry", "bracelets-chains-jewelry"],
             ["others", "others"]
+        ])
+    },
+    baby:{
+        accessories: new Map([
+            ["Safety", "safety"],
+            ["Bottles", "bottles"],
+            ["Monitors", "monitors"],
+            ["Diapering", "diapering"],
+            ["Car seats", "car-seats"],
+            ["Baby care", "baby-care"],
+            ["Baby toys", "baby-toys"],
+            ["Beds/Cribs", "beds-cribs"],
+            ["Baby wipes", "baby-wipes"],
+            ["Diaper bags", "diaper-bags"],
+            ["Bibs/Diapers", "bibs-diapers"],
+            ["Baby bathtubs", "baby-bathtubs"],
+            ["Baby blankets", "baby-blankets"],
+            ["Strollers/Prams", "strollers-prams"],
+            ["Teats/Pacifiers", "teats-pacifiers"],
+            ["Others", "Others"]
         ])
     }
 }
