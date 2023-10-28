@@ -24,7 +24,7 @@ class Utilitaire{
             var reference = x.toString().substring(4, 8);
         }else{
             y = parseInt(y.toString().substring(2));
-            var reference = (x*y).toString().substring(2, 8);
+            var reference = (x*y).toString().substring(2, 12);
         }   
         return reference;
     }

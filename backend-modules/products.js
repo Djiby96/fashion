@@ -79,18 +79,25 @@ var ManWoman = {
                     res.redirect("/");
                 }else{
                     var products = rs[0];
-
-                    // var d = JSON.stringify(products);
-                    // fs.writeFileSync("./backend-modules/fc.js", d)
                     
                     // pagination
                     var N = rs[1][0]['COUNT(*)'],
                         URL = req._parsedOriginalUrl,
                         pagination_link = pagination.createPaginationLink(N, page, URL, 100);
                 
-                    var describe_page = describePage.get("/"+gender+"/"+category) || "Discover a world of fashion at Our store. We offer a carefully curated selection of stylish clothing and footwear for both men and women. From casual to formal, find your perfect look with us."; 
+                    //title and description for page adapter
+                    var title_page = "Clothing, shoes and accessories | Men, Women, Baby, Boy, Girl", 
+                        describe_page = "Discover a world of fashion at Our store. We offer a carefully curated selection of stylish clothing and footwear for both men and women. From casual to formal, find your perfect look with us."; 
+                       
+                    var titleDescripPage = describePage.get(req._parsedOriginalUrl.path);
+                    if(titleDescripPage){
+                        title_page = describePage.get(req._parsedOriginalUrl.path).title;
+                        describe_page = describePage.get(req._parsedOriginalUrl.path).description || describe_page;
+                    }
+
                     //render
                     res.render("products.html", {
+                        title_page: title_page,
                         describe_page: describe_page,
                         gender: gender,
                         category: category,
