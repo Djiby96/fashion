@@ -28,9 +28,11 @@ https://beauty-fashion.onrender.com/men/clothing?type=boxers-briefs
 https://beauty-fashion.onrender.com/men/clothing?type=tanks
 https://beauty-fashion.onrender.com/men/clothing?type=jallaba-sabador-tunic-fabric-bazin
 
-https://beauty-fashion.onrender.com/men/shoes?type=sports-shoes
+https://beauty-fashion.onrender.com/men/shoes?type=athletic-shoes-sneakers
+https://beauty-fashion.onrender.com/men/shoes?type=crocs-clogs
+https://beauty-fashion.onrender.com/men/shoes?type=cleags
 https://beauty-fashion.onrender.com/men/shoes?type=boots-ankle-boots
-https://beauty-fashion.onrender.com/men/shoes?type=loafers-oxfords-derbies
+https://beauty-fashion.onrender.com/men/shoes?type=loafers-oxfords-derbies-mocassins
 https://beauty-fashion.onrender.com/men/shoes?type=sandals-open-toe-shoes-slippers-espadrilles
 https://beauty-fashion.onrender.com/men/shoes?type=traditional-african
 
@@ -52,11 +54,12 @@ https://beauty-fashion.onrender.com/women/clothing?type=shorts
 https://beauty-fashion.onrender.com/women/clothing?type=swimsuits-panties
 https://beauty-fashion.onrender.com/women/clothing?type=abaya-jallaba-fabric-bazin
 
-https://beauty-fashion.onrender.com/women/shoes?type=sports-shoes
+https://beauty-fashion.onrender.com/women/shoes?type=athletic-shoes-sneakers
+https://beauty-fashion.onrender.com/women/shoes?type=crocs-clogs
 https://beauty-fashion.onrender.com/women/shoes?type=boots-ankle-boots
 https://beauty-fashion.onrender.com/women/shoes?type=traditional-african
 https://beauty-fashion.onrender.com/women/shoes?type=flats-heels-pumps
-https://beauty-fashion.onrender.com/women/shoes?type=loafers-oxfords-derbies
+https://beauty-fashion.onrender.com/women/shoes?type=loafers-oxfords-derbies-mocassins
 https://beauty-fashion.onrender.com/women/shoes?type=sandals-open-toe-shoes-slippers-espadrilles
 
 https://beauty-fashion.onrender.com/men/accessories?type=hair

@@ -30,9 +30,11 @@ https://clothing-shoes-accessories.cyclic.app/men/clothing?type=tanks
 https://clothing-shoes-accessories.cyclic.app/men/clothing?type=jallaba-sabador-tunic-fabric-bazin
 
 
-https://clothing-shoes-accessories.cyclic.app/men/shoes?type=sports-shoes
+https://clothing-shoes-accessories.cyclic.app/men/shoes?type=athletic-shoes-sneakers
+https://clothing-shoes-accessories.cyclic.app/men/shoes?type=crocs-clogs
+https://clothing-shoes-accessories.cyclic.app/men/shoes?type=cleags
 https://clothing-shoes-accessories.cyclic.app/men/shoes?type=boots-ankle-boots
-https://clothing-shoes-accessories.cyclic.app/men/shoes?type=loafers-oxfords-derbies
+https://clothing-shoes-accessories.cyclic.app/men/shoes?type=loafers-oxfords-derbies-mocassins
 https://clothing-shoes-accessories.cyclic.app/men/shoes?type=sandals-open-toe-shoes-slippers-espadrilles
 https://clothing-shoes-accessories.cyclic.app/men/shoes?type=traditional-african
 
@@ -55,12 +57,12 @@ https://clothing-shoes-accessories.cyclic.app/women/clothing?type=shorts
 https://clothing-shoes-accessories.cyclic.app/women/clothing?type=swimsuits-panties
 https://clothing-shoes-accessories.cyclic.app/women/clothing?type=abaya-jallaba-fabric-bazin
 
-
-https://clothing-shoes-accessories.cyclic.app/women/shoes?type=sports-shoes
+https://clothing-shoes-accessories.cyclic.app/women/shoes?type=athletic-shoes-sneakers
+https://clothing-shoes-accessories.cyclic.app/women/shoes?type=crocs-clogs
 https://clothing-shoes-accessories.cyclic.app/women/shoes?type=boots-ankle-boots
 https://clothing-shoes-accessories.cyclic.app/women/shoes?type=traditional-african
 https://clothing-shoes-accessories.cyclic.app/women/shoes?type=flats-heels-pumps
-https://clothing-shoes-accessories.cyclic.app/women/shoes?type=loafers-oxfords-derbies
+https://clothing-shoes-accessories.cyclic.app/women/shoes?type=loafers-oxfords-derbies-mocassins
 https://clothing-shoes-accessories.cyclic.app/women/shoes?type=sandals-open-toe-shoes-slippers-espadrilles
 
 https://clothing-shoes-accessories.cyclic.app/men/accessories?type=hair

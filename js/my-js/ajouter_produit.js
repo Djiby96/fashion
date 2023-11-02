@@ -49,7 +49,7 @@ var cp = document.getElementById("cp"),
         
         container_type.replaceChildren();    
 
-        if(x == 'baby'){
+        if(x == 'baby' && y=='accessories'){
             container_type.replaceChildren(ta_baby, ss);
         }else if((x == 'men' || x== 'men-women') && y == 'clothing'){
             container_type.replaceChildren(tvh);

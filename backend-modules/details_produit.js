@@ -21,7 +21,7 @@ var DetailsProduct = {
             number = title_number.substring(title_number.lastIndexOf("-")+1),
             title = title_number.substring(0, title_number.lastIndexOf("-"));
 
-        if((gender !='men' && gender !='women' && gender !='men-women' && gender !='child-baby') || (category != 'clothing' && category !='shoes' && category !='accessories')){
+        if((gender !='men' && gender !='women' && gender !='men-women' && gender !='baby') || (category != 'clothing' && category !='shoes' && category !='accessories')){
             res.redirect("/");
         }else{
             var R1 = `SELECT product.*, REPLACE(FORMAT(price, 0), ',', ' ') AS 'price_format', url_img, number_img, category ` + 

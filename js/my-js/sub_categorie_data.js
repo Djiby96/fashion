@@ -2,7 +2,7 @@ var SubCategorieData = {
     men:{
         clothing : new Map([
             ["suit", "suit"],
-            ["tanks", "tanks"],
+            ["tank-top", "tank top"],
             ["shirt", "shirt"],
             ["shorts", "shorts"],
             ["pants", "pants"],
@@ -17,10 +17,12 @@ var SubCategorieData = {
             
         ]),
         shoes : new Map([
-            ["sports shoes", "sports-shoes"],
+            ["Cleags", "cleags"],
+            ["Crocs/Clogs", "crocs-clogs"],
             ["boots/ankle boots", "boots-ankle-boots"],
             ["traditional African", "traditional-african"],
-            ["loafers/oxfords/derbies", "loafers-oxfords-derbies"],
+            ["Athletic Shoes/Sneakers", "athletic-shoes-sneakers"],
+            ["loafers/oxfords/derbies/mocassins", "loafers-oxfords-derbies-mocassins"],
             ["sandals/open-toe shoes/slippers/espadrilles", "sandals-open-toe-shoes-slippers-espadrilles"],
             ["others", "others"]
             
@@ -66,11 +68,12 @@ var SubCategorieData = {
             ["others", "others"]
         ]),
         shoes : new Map([
-            ["sports shoes", "sports-shoes"],
+            ["Crocs/Clogs", "crocs-clogs"],
+            ["flats/heels/pumps", "flats-heels-pumps"],
             ["boots/ankle boots", "boots-ankle-boots"],
             ["traditional African", "traditional-african"],
-            ["flats/heels/pumps", "flats-heels-pumps"],
-            ["loafers/oxfords/derbies", "loafers-oxfords-derbies"],
+            ["Athletic Shoes/Sneakers", "athletic-shoes-sneakers"],
+            ["loafers/oxfords/derbies/mocassins", "loafers-oxfords-derbies-mocassins"],
             ["sandals/open-toe shoes/slippers/espadrilles", "sandals-open-toe-shoes-slippers-espadrilles"],
             ["others", "others"]
             
@@ -124,6 +127,7 @@ var SubCategorieData = {
     },
     baby:{
         accessories: new Map([
+            ["Bibs", "bibs"],
             ["Safety", "safety"],
             ["Bottles", "bottles"],
             ["Monitors", "monitors"],
@@ -134,7 +138,6 @@ var SubCategorieData = {
             ["Beds/Cribs", "beds-cribs"],
             ["Baby wipes", "baby-wipes"],
             ["Diaper bags", "diaper-bags"],
-            ["Bibs/Diapers", "bibs-diapers"],
             ["Baby bathtubs", "baby-bathtubs"],
             ["Baby blankets", "baby-blankets"],
             ["Strollers/Prams", "strollers-prams"],

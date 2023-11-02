@@ -26,6 +26,7 @@ var describePage = new Map([
     ["/men/clothing?type=boxers-briefs", {title:"boxers and briefs for men"}],
     ["/men/clothing?type=tanks", {title:"tanks for men"}],
     ["/men/clothing?type=jallaba-sabador-tunic-fabric-bazin", {title:"Jallaba, Sabador, Tunic, Fabric and bazin for men"}],
+    ["/men/clothing?type=sweaters-cardigans-coats-jackets", {title:"Sweater, Cardigans, Coats and Jackets for men"}],
     ["/men/shoes?type=sports-shoes", {title:"Sport shoes for men"}],
     ["/men/shoes?type=boots-ankle-boots", {title:"boots and ankle boots shoes for men"}],
     ["/men/shoes?type=loafers-oxfords-derbies", {title:"loafers, oxfords and derbies shoes for men"}],
@@ -86,7 +87,23 @@ var describePage = new Map([
     ["/women/accessories?type=glasses-watches", {title:"Glasse and watche for women"}],
     ["/women/accessories?type=playstation-games", {title:"Playstation and game for women"}],
     ["/women/accessories?type=bracelets-chains-jewelry", {title:"Jewelry, chains and bracelets for women"}],
-    ["/women/accessories?type=pockets-saddlebags-pencil-cases", {title:"Pockets, saddlebags, pencil cases for women"}]
+    ["/women/accessories?type=pockets-saddlebags-pencil-cases", {title:"Pockets, saddlebags, pencil cases for women"}],
+    ["/baby/accessories?type=safety", {title:"Safety for baby"}],
+    ["/baby/accessories?type=bottles", {title:"Baby bottles"}],
+    ["/baby/accessories?type=monitors", {title:"Monitors for baby"}],
+    ["/baby/accessories?type=diapering", {title:"Diapers for baby"}],
+    ["/baby/accessories?type=car-seats", {title:"Car seats for baby"}],
+    ["/baby/accessories?type=baby-care", {title:"Care for baby"}],
+    ["/baby/accessories?type=baby-toys", {title:"Toys for baby"}],
+    ["/baby/accessories?type=beds-cribs", {title:"Beds ands cribs for baby"}],
+    ["/baby/accessories?type=baby-wipes", {title:"Wipes for baby"}],
+    ["/baby/accessories?type=diaper-bags", {title:"Diapers bags for baby"}],
+    ["/baby/accessories?type=bibs", {title:"bibs for baby"}],
+    ["/baby/accessories?type=baby-bathtubs", {title:"Bathtub for baby"}],
+    ["/baby/accessories?type=baby-blankets", {title:"Blankets for baby"}],
+    ["/baby/accessories?type=strollers-prams", {title:"Strollers and Prams for baby"}],
+    ["/baby/accessories?type=teats-pacifiers", {title:"Teats and pacifiers for baby"}],
+    ["/baby/accessories?type=others", {title:"All accessories for baby"}]
 ])
 
 
