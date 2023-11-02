@@ -21,10 +21,10 @@ var countryCode = tn.getAttribute("cc");
 var countryDetect = new Intl.DisplayNames(['en'], {type: 'region'});
 if(countryCode){
     var countryName = countryDetect.of(countryCode); 
-    tn.textContent = `It appears to us that we see your exact location in the span class='text-uppercase'>${countryName}</span>, and `+ 
+    tn.innerHTML = `It appears to us that we see your exact location in the span class='text-uppercase'>${countryName}</span>, and `+ 
     `we have noticed that our Amazon store is closer to you. If you wish to purchase this product, we will `+
     `do so from this store for a quick and cost-effective delivery. Thank you!`
 }else{
-    tn.textContent = `Our geolocation system has noticed that our subsidiary store on Amazon is closer to you. If you wish to purchase this product, we will `+
+    tn.innerHTML = `Our geolocation system has noticed that our subsidiary store on Amazon is closer to you. If you wish to purchase this product, we will `+
     `do so from this store for a quick and cost-effective delivery. Thank you!`;
 }
