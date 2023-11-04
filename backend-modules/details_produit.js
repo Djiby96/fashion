@@ -87,6 +87,7 @@ var DetailsProduct = {
             var RF = R1 + ";" + R2;
             con.query(RF, [number, number, against], (err, rs) =>{
                 if(err){
+                    console.log(err);
                     res.redirect("/");
                 }else{
                     var products = rs[0],

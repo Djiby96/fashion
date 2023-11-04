@@ -50,7 +50,7 @@ var Accueil = require("./backend-modules/accueil.js"),
 //use message flash
 app.use(flashMessage.message) 
 
-// get method from client
+// get method from client 
 app.get("/", Accueil.page_accueil)
 
 app.get("/accessories", Accessory.page)

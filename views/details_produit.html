@@ -63,14 +63,14 @@
     <section class="mb-8">
         <div class="center px-2">
             <div class="center mb-4 mr-lg-5" id="container_imgs">
-                <div class="column mr-3 mt-3" id="container_small_imgs">
+                <div class="column mr-3 mt-3 d-none" id="container_small_imgs">
                     <%for(let i = 1; i<=product.number_img; i++){%>
                         <img src="<%=product.url_img.substring(0, product.url_img.lastIndexOf('_') + 1) + i + '.jpg'%>" class="small_imgs op-06 height-5 cs-p rounded m-2 bx-s-2 border hover-op-1" style="max-width: 5rem;" alt="<%=product.title%>" title="<%=product.title%>">
                     <%}%>
                 </div>
                 <div id="img_bg" class="center position-relative bg-white m-w-90 bx-s-10">
                     <!-- <div class="position-absolute z-i-1 w-100 h-100" id="tr_cl"></div> -->
-                    <img src="<%=product.url_img%>" class="z-i-2 bg-white bx-s-10 w-100 h-100 bx-s-10 px-3" style="max-height: 36rem !important;" id="img_dt" alt="" title="<%=product.title%>">
+                    <img src="<%=product.url_img%>" class="z-i-2 bg-white bx-s-10 w-100 h-100 bx-s-10 px-3" style="max-height: 36rem !important;" id="img_dt" alt="<%=product.title%>" title="<%=product.title%>">
                 </div>
             </div>
             <div class="width-32 m-w-100">
@@ -139,7 +139,6 @@
                 supprimer ce produit
             </button>
         </a> -->
-        
 
         <!-- share -->
         <div class="column-center" style="margin-top: 3rem;">

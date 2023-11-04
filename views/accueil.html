@@ -53,9 +53,9 @@
                 <%if(products_h.length>=1){%>
                     <div class="center mb-5">
                         <%products_h.forEach((product) =>{%>
-                            <a href="/<%=product.gender%>/<%=product.category%>/<%=product.title_concat%>-<%=product.number%>" class="link_product transition-1 width-13 bx-s-2 hover-bx-s-10 m-2 m-lg-3 br-06 m-w-95 t-d-n pb-4" title="<%=product.title%>">
+                            <a href="/<%=product.gender%>/<%=product.category%>/<%=product.title_concat%>-<%=product.number%>" class="link_product transition-1 width-13 bx-s-2 hover-bx-s-10 m-2 m-lg-3 br-06 m-w-95 t-d-n pb-4" alt="<%=product.title%>" title="<%=product.title%>">
                                 <div class="center">
-                                    <img src="<%=product.url_img%>" alt="<%=product.title%>" class="imgs_product height-10 mb-2 br-06" style="max-width: 100% !important;">
+                                    <img src="<%=product.url_img%>" alt="<%=product.title%>" title="<%=product.title%>" class="imgs_product height-10 mb-2 br-06" style="max-width: 100% !important;">
                                 </div>
                                 <div class="product_title text-muted ellipsis-2 fs-075 mb-3 px-2">
                                     <%=product.title%>
@@ -99,9 +99,9 @@
                 <%if(products_f.length>=1){%>
                     <div class="center">
                         <%products_f.forEach((product) =>{%>
-                            <a href="/<%=product.gender%>/<%=product.category%>/<%=product.title_concat%>-<%=product.number%>" class="link_product transition-1 width-13 bx-s-2 hover-bx-s-10 m-2 m-lg-3 br-06 m-w-95 t-d-n pb-4" title="<%=product.title%>">
+                            <a href="/<%=product.gender%>/<%=product.category%>/<%=product.title_concat%>-<%=product.number%>" class="link_product transition-1 width-13 bx-s-2 hover-bx-s-10 m-2 m-lg-3 br-06 m-w-95 t-d-n pb-4" alt="<%=product.title%>" title="<%=product.title%>">
                                 <div class="center">
-                                    <img src="<%=product.url_img%>" alt="<%=product.title%>" class="imgs_product height-10 mb-2 br-06" style="max-width: 100% !important;">
+                                    <img src="<%=product.url_img%>" alt="<%=product.title%>" title="<%=product.title%>" class="imgs_product height-10 mb-2 br-06" style="max-width: 100% !important;">
                                 </div>
                                 <div class="product_title text-muted ellipsis-2 fs-075 mb-3 px-2">
                                     <%=product.title%>
