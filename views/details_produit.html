@@ -170,9 +170,9 @@
             </div>
             <div class="center">
                 <%products_sim.forEach((product) =>{%>
-                    <a href="/<%=product.gender%>/<%=product.category%>/<%=product.title_concat%>-<%=product.number%>?type=<%=product.type%>" class="p_si m-2 m-lg-3 bx-s-2 hover-bx-s-10 width-13 pb-4 br-06 t-d-n">
+                    <a href="/<%=product.gender%>/<%=product.category%>/<%=product.title_concat%>-<%=product.number%>?type=<%=product.type%>" class="p_si m-2 m-lg-3 bx-s-2 hover-bx-s-10 width-13 pb-4 br-06 t-d-n" alt="<%=product.title%>" title="<%=product.title%>">
                        <div class="center mb-3">
-                            <img src="<%=product.url_img%>" class="img_si rounded height-12" alt="<%=product.title%>" style="max-width: 100% !important;">
+                            <img src="<%=product.url_img%>" class="img_si rounded height-12" alt="<%=product.title%>" title="<%=product.title%>" style="max-width: 100% !important;">
                        </div>
                         <h5 class="text-center fs-12 cl-purple text-shadow-1">
                             <%if(product.price){%>
