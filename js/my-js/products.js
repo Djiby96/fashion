@@ -215,11 +215,11 @@ if(check_type_query){
 
 }
 
-// const link_product = document.querySelectorAll(".link_product");
-// link_product.forEach((link) =>{
-//     var get_link = link.getAttribute("href");
-//     console.log(get_link);
-// })
+const link_product = document.querySelectorAll(".link_product");
+link_product.forEach((link) =>{
+    var get_link = link.getAttribute("href");
+    console.log(get_link);
+})
 
 // 6
 const ss = document.getElementById("ss") || "";
