@@ -51,7 +51,7 @@ var ManWoman = {
                 type = req.query.type,
                 price_order = req.query.price,
                 sex = req.query.sex;
-
+   
             if(price_order){
                 R = R + `AND price !=0 `;
                 var order_price = `price ${price_order}, `
@@ -71,6 +71,8 @@ var ManWoman = {
 
 
             R = R + `ORDER BY ` + order_price + `date DESC LIMIT ${(page - 1)*100}, 100`
+
+            console.log(R);
 
             var RF = R + ";" + RS;
             con.query(RF, (err, rs) =>{

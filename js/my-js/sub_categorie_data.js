@@ -131,7 +131,7 @@ var SubCategorieData = {
             ["Safety", "safety"],
             ["Bottles", "bottles"],
             ["Monitors", "monitors"],
-            ["Diapering", "diapering"],
+            ["Diapers", "diapers"],
             ["Car seats", "car-seats"],
             ["Baby care", "baby-care"],
             ["Baby toys", "baby-toys"],

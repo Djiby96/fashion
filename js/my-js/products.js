@@ -179,7 +179,8 @@ sp.addEventListener("change", () =>{
 st.addEventListener("change", () =>{
     var st_value = st.value;
     if(st_value){
-        var URL_REDIRECT = URLQueryString.changeURLParameters("type", st_value)
+        var URL_REDIRECT = URLQueryString.changeURLParameters("type", st_value),
+            URL_REDIRECT = URLQueryString.deleteParameter("page")
     }else{
         var URL_REDIRECT = URLQueryString.deleteParameter("type")
     }
@@ -219,7 +220,8 @@ const ss = document.getElementById("ss") || "";
 ss.addEventListener("change", () =>{
     var value = ss.value;
     if(value){
-        var URL_REDIRECT = URLQueryString.changeURLParameters("sex", value)
+        var URL_REDIRECT = URLQueryString.changeURLParameters("sex", value),
+            URL_REDIRECT = URLQueryString.deleteParameter("page");
     }else{
         var URL_REDIRECT = URLQueryString.deleteParameter("sex")
     }
