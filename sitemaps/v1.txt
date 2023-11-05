@@ -27,7 +27,6 @@ https://beauty-fashion.onrender.com/men/clothing?type=sock-hosiery
 https://beauty-fashion.onrender.com/men/clothing?type=boxers-briefs
 https://beauty-fashion.onrender.com/men/clothing?type=tanks
 https://beauty-fashion.onrender.com/men/clothing?type=jallaba-sabador-tunic-fabric-bazin
-
 https://beauty-fashion.onrender.com/men/shoes?type=athletic-shoes-sneakers
 https://beauty-fashion.onrender.com/men/shoes?type=crocs-clogs
 https://beauty-fashion.onrender.com/men/shoes?type=cleags
@@ -35,7 +34,6 @@ https://beauty-fashion.onrender.com/men/shoes?type=boots-ankle-boots
 https://beauty-fashion.onrender.com/men/shoes?type=loafers-oxfords-derbies-mocassins
 https://beauty-fashion.onrender.com/men/shoes?type=sandals-open-toe-shoes-slippers-espadrilles
 https://beauty-fashion.onrender.com/men/shoes?type=traditional-african
-
 https://beauty-fashion.onrender.com/women/clothing?type=pants
 https://beauty-fashion.onrender.com/women/clothing?type=jeans
 https://beauty-fashion.onrender.com/women/clothing?type=shirt
@@ -53,7 +51,6 @@ https://beauty-fashion.onrender.com/women/clothing?type=suit
 https://beauty-fashion.onrender.com/women/clothing?type=shorts
 https://beauty-fashion.onrender.com/women/clothing?type=swimsuits-panties
 https://beauty-fashion.onrender.com/women/clothing?type=abaya-jallaba-fabric-bazin
-
 https://beauty-fashion.onrender.com/women/shoes?type=athletic-shoes-sneakers
 https://beauty-fashion.onrender.com/women/shoes?type=crocs-clogs
 https://beauty-fashion.onrender.com/women/shoes?type=boots-ankle-boots
@@ -61,7 +58,6 @@ https://beauty-fashion.onrender.com/women/shoes?type=traditional-african
 https://beauty-fashion.onrender.com/women/shoes?type=flats-heels-pumps
 https://beauty-fashion.onrender.com/women/shoes?type=loafers-oxfords-derbies-mocassins
 https://beauty-fashion.onrender.com/women/shoes?type=sandals-open-toe-shoes-slippers-espadrilles
-
 https://beauty-fashion.onrender.com/men/accessories?type=hair
 https://beauty-fashion.onrender.com/men/accessories?type=belts
 https://beauty-fashion.onrender.com/men/accessories?type=perfumes
@@ -77,7 +73,6 @@ https://beauty-fashion.onrender.com/men/accessories?type=childrens-toys
 https://beauty-fashion.onrender.com/men/accessories?type=glasses-watches
 https://beauty-fashion.onrender.com/men/accessories?type=playstation-games
 https://beauty-fashion.onrender.com/men/accessories?type=pockets-saddlebags-pencil-cases
-
 https://beauty-fashion.onrender.com/women/accessories?type=hair
 https://beauty-fashion.onrender.com/women/accessories?type=belts
 https://beauty-fashion.onrender.com/women/accessories?type=makeup
@@ -96,8 +91,6 @@ https://beauty-fashion.onrender.com/women/accessories?type=glasses-watches
 https://beauty-fashion.onrender.com/women/accessories?type=playstation-games
 https://beauty-fashion.onrender.com/women/accessories?type=bracelets-chains-jewelry
 https://beauty-fashion.onrender.com/women/accessories?type=pockets-saddlebags-pencil-cases
-
-
 https://beauty-fashion.onrender.com/baby/accessories?type=safety
 https://beauty-fashion.onrender.com/baby/accessories?type=bottles
 https://beauty-fashion.onrender.com/baby/accessories?type=monitors
