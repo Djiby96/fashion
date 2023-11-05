@@ -72,8 +72,6 @@ var ManWoman = {
 
             R = R + `ORDER BY ` + order_price + `date DESC LIMIT ${(page - 1)*100}, 100`
 
-            console.log(R);
-
             var RF = R + ";" + RS;
             con.query(RF, (err, rs) =>{
                 if(err){
