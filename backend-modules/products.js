@@ -70,7 +70,7 @@ var ManWoman = {
             }
 
 
-            R = R + `ORDER BY ` + order_price + `date DESC LIMIT ${(page - 1)*100}, 100`
+            R = R + `ORDER BY ` + order_price + `date DESC LIMIT ${(page - 1)*50}, 50`
 
             var RF = R + ";" + RS;
             con.query(RF, (err, rs) =>{
@@ -83,7 +83,7 @@ var ManWoman = {
                     // pagination
                     var N = rs[1][0]['COUNT(*)'],
                         URL = req._parsedOriginalUrl,
-                        pagination_link = pagination.createPaginationLink(N, page, URL, 100);
+                        pagination_link = pagination.createPaginationLink(N, page, URL, 50);
                 
                     //title and description for page adapter
                     var title_page = "Clothing, shoes and accessories | Men, Women, Baby, Boy, Girl", 
