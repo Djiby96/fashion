@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+<channel>
+
+<title>Men's product feed for Google Merchant</title>
+<link>https://store.google.com</link>
+<description>This is an example of a basic RSS 2.0 document containing a single item</description>
+
+<item>
+<g:id>0863303901</g:id>
+<g:title>ATG by Wrangler Men's 5 Pocket Outdoor Pant</g:title>
+<g:description>ATG by Wrangler Men's 5 Pocket Outdoor Pant</g:description>
+<g:link>https://beauty-fashion.onrender.com/men/clothing/ATG-by-Wrangler-Men's-5-Pocket-Outdoor-Pant-0863303901</g:link> 
+<g:image_link>https://m.media-amazon.com/images/I/81XdF6gCcPL._AC_UX522_.jpg</g:image_link> 
+<g:condition>New</g:condition>
+<g:availability>In stock</g:availability>
+<g:price>37.20 USD</g:price>
+<g:google_product_category>Men's clothes</g:google_product_category>
+<g:product_type>Men's clothes > Pants</g:product_type>
+<g:adult>no</g:adult>
+<g:size>XL</g:size>
+<g:gender>Male</g:gender>
+<g:brand>Men's clothes</g:brand>
+<g:age_group>Adult</g:age_group>
+<g:color>Green/Black/Blue</g:color>
+<g:product_detail>Pant for Men's</g:product_detail>
+<g:shopping_ads_excluded_country>KR</g:shopping_ads_excluded_country>
+</item>
+
+</channel>
+</rss>
