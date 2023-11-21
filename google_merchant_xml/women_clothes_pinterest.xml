@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+<channel>
+
+<title>Women's clothes product feed for Google Merchant</title>
+<link>https://store.google.com</link>
+<description>This is an example of a basic RSS 2.0 document containing a single item</description>
+
+<item>
+<id>5812027869</id>
+<title>Beaully Women's Flannel Plaid Shacket Long Sleeve Button Down Shirts Jacket Coats with Side Pockets</title>
+<description>Beaully Women's Flannel Plaid Shacket Long Sleeve Button Down Shirts Jacket Coats with Side Pockets</description>
+<link>https://beauty-fashion.onrender.com/women/clothing/Beaully-Women's-Flannel-Plaid-Shacket-Long-Sleeve-Button-Down-Shirts-Jacket-Coats-with-Side-Pockets-5812027869</link> 
+<image_link>https://m.media-amazon.com/images/I/61LSELYQ26L._AC_SY550_.jpg</image_link> 
+<condition>New</condition>
+<availability>In stock</availability>
+<price>34.89 USD</price>
+<product_type>Women's clothes &gt; Jackets and Coats</product_type>
+<adult>no</adult>
+<gender>female</gender>
+<brand></brand>
+<age_group>adult</age_group>
+</item>
+
+</channel>
+</rss>

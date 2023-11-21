@@ -48,8 +48,10 @@ var cp = document.getElementById("cp"),
             y = cv.value;
         
         container_type.replaceChildren();    
-
-        if(x == 'baby' && y=='accessories'){
+        
+        if(x == 'baby' && (y=='shoes' || y=='clothing')){
+            container_type.replaceChildren(ss);
+        }else if(x == 'baby' && y=='accessories'){
             container_type.replaceChildren(ta_baby, ss);
         }else if((x == 'men' || x== 'men-women') && y == 'clothing'){
             container_type.replaceChildren(tvh);
