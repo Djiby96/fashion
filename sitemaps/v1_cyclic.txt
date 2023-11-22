@@ -76,6 +76,7 @@ https://clothing-shoes-accessories.cyclic.app/men/accessories?type=gloves-mitten
 https://clothing-shoes-accessories.cyclic.app/men/accessories?type=childrens-toys
 https://clothing-shoes-accessories.cyclic.app/men/accessories?type=glasses-watches
 https://clothing-shoes-accessories.cyclic.app/men/accessories?type=playstation-games
+https://clothing-shoes-accessories.cyclic.app/men/accessories?type=luggage-travel-gear
 https://clothing-shoes-accessories.cyclic.app/men/accessories?type=pockets-saddlebags-pencil-cases
 
 https://clothing-shoes-accessories.cyclic.app/women/accessories?type=hair
@@ -94,6 +95,7 @@ https://clothing-shoes-accessories.cyclic.app/women/accessories?type=childrens-t
 https://clothing-shoes-accessories.cyclic.app/women/accessories?type=gloves-mittens
 https://clothing-shoes-accessories.cyclic.app/women/accessories?type=glasses-watches
 https://clothing-shoes-accessories.cyclic.app/women/accessories?type=playstation-games
+https://clothing-shoes-accessories.cyclic.app/women/accessories?type=luggage-travel-gear
 https://clothing-shoes-accessories.cyclic.app/women/accessories?type=bracelets-chains-jewelry
 https://clothing-shoes-accessories.cyclic.app/women/accessories?type=pockets-saddlebags-pencil-cases
 https://clothing-shoes-accessories.cyclic.app/baby/accessories?type=safety

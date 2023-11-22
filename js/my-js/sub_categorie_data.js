@@ -41,6 +41,7 @@ var SubCategorieData = {
             ["gloves/mittens", "gloves-mittens"],
             ["glasses/watches", "glasses-watches"],
             ["playstation/games", "playstation-games"],
+            ["Luggage/Travel Gear", "luggage-travel-gear"],
             ["pockets/saddlebags/pencil cases", "pockets-saddlebags-pencil-cases"],
             ["others", "others"]
         ])
@@ -94,6 +95,7 @@ var SubCategorieData = {
             ["gloves/mittens", "gloves-mittens"],
             ["glasses/watches", "glasses-watches"],
             ["playstation/games", "playstation-games"],
+            ["Luggage/Travel Gear", "luggage-travel-gear"],
             ["bracelets/chains/jewelry", "bracelets-chains-jewelry"],
             ["pockets/saddlebags/pencil cases", "pockets-saddlebags-pencil-cases"],
             ["others", "others"]
@@ -108,6 +110,7 @@ var SubCategorieData = {
             ["children's toys", "childrens-toys"],
             ["glasses/watches", "glasses-watches"],
             ["playstation/games", "playstation-games"],
+            ["Luggage/Travel Gear", "luggage-travel-gear"],
             ["others", "others"]
         ])
     },
@@ -121,6 +124,7 @@ var SubCategorieData = {
             ["children's toys", "childrens-toys"],
             ["glasses/watches", "glasses-watches"],
             ["playstation/games", "playstation-games"],
+            ["Luggage/Travel Gear", "luggage-travel-gear"],
             ["bracelets/chains/jewelry", "bracelets-chains-jewelry"],
             ["others", "others"]
         ])
