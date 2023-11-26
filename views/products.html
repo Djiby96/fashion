@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="<%=describe_page%>">
     <link rel="icon" href="/logo/l1.jpg" type="image/jpg">
     <title><%=title_page%></title>
+    <meta name="description" content="<%=describe_page%>">
 
     <!-- dependant js  -->
     <script defer src="/my-js/sub_categorie_data.js"></script>
@@ -85,9 +85,13 @@
                         <%products.forEach((product) =>{%>
                             <a href="/<%=gender%>/<%=category%>/<%=product.title_concat%>-<%=product.number%>" title="<%=product.title%>" class="link_product width-13 height-21 bx-s-2 hover-bx-s-10 m-2 m-lg-3 br-06 m-w-95 t-d-n">
                                 <div class="center">
-                                    <img src="<%=product.url_img%>" alt="<%=product.title%>" title="<%=product.title%>" class="imgs_product height-13 mb-2" style="max-width: 100% !important;">
+                                    <%if(title_page == 'Clothing, shoes and accessories | Men, Women, Baby, Boy, Girl'){%>
+                                        <img src="<%=product.url_img%>" alt="<%=product.title%>" title="<%=product.title%>" class="imgs_product height-13 mb-2" style="max-width: 100% !important;">
+                                    <%}else{%>
+                                        <img src="<%=product.url_img%>" alt="<%=title_page%>" title="<%=product.title%>" class="imgs_product height-13 mb-2" style="max-width: 100% !important;">
+                                    <%}%>
                                 </div>
-                                <div class="product_title text-muted fs-075 ellipsis-2 mb-3 px-2">
+                                <div class="product_title text-muted fs-075 ellipsis-2 mb-3 px-2" >
                                     <%=product.title%>
                                 </div>
                                 <h5 class="center">
@@ -115,7 +119,11 @@
                         <%products.forEach((product) =>{%>
                             <a href="/<%=gender%>/<%=category%>/<%=product.title_concat%>-<%=product.number%>" title="<%=product.title%>" class="link_product width-14 height-17 bx-s-2 hover-bx-s-10 m-2 m-lg-3 br-06 m-w-95 t-d-n">
                                 <div class="center">
-                                    <img src="<%=product.url_img%>" alt="<%=product.title%>" title="<%=product.title%>" class="imgs_product height-9 mb-2" style="max-width: 100% !important;">
+                                    <%if(title_page == 'Clothing, shoes and accessories | Men, Women, Baby, Boy, Girl'){%>
+                                        <img src="<%=product.url_img%>" alt="<%=product.title%>" title="<%=product.title%>" class="imgs_product height-13 mb-2" style="max-width: 100% !important;">
+                                    <%}else{%>
+                                        <img src="<%=product.url_img%>" alt="<%=title_page%>" title="<%=product.title%>" class="imgs_product height-13 mb-2" style="max-width: 100% !important;">
+                                    <%}%>
                                 </div>
                                 <div class="product_title text-muted fs-075 ellipsis-2 mb-3 px-2">
                                     <%=product.title%>
@@ -143,9 +151,13 @@
                         <%})%>
                     <%}else{%>
                         <%products.forEach((product) =>{%>
-                            <a href="/<%=gender%>/<%=category%>/<%=product.title_concat%>-<%=product.number%>" title="<%=product.title%>" class="link_product width-14 height-17 bx-s-2 hover-bx-s-10 m-2 m-lg-3 br-06 m-w-95 t-d-n">
+                            <a href="/<%=gender%>/<%=category%>/<%=product.title_concat%>-<%=product.number%>" title="<%=product.title%>" class="link_product width-14 height-17 bx-s-2 hover-bx-s-10 m-2 m-lg-3 br-06 m-w-95 t-d-n"> 
                                 <div class="center">
-                                    <img src="<%=product.url_img%>" alt="<%=product.title%>" title="<%=product.title%>" class="imgs_product height-9 mb-2" style="max-width: 100% !important;">
+                                    <%if(title_page == 'Clothing, shoes and accessories | Men, Women, Baby, Boy, Girl'){%>
+                                        <img src="<%=product.url_img%>" alt="<%=product.title%>" title="<%=product.title%>" class="imgs_product height-13 mb-2" style="max-width: 100% !important;">
+                                    <%}else{%>
+                                        <img src="<%=product.url_img%>" alt="<%=title_page%>" title="<%=product.title%>" class="imgs_product height-13 mb-2" style="max-width: 100% !important;">
+                                    <%}%>
                                 </div>
                                 <div class="product_title text-muted fs-075 ellipsis-2 mb-3 px-2">
                                     <%=product.title%>
