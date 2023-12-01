@@ -79,7 +79,11 @@
                     <%if(product.price>0){%>
                         <%=product.price%> $
                     <%}else{%>
-                        Price depending size 
+                        <%if(category == 'shoes' || category == 'clothing'){%>
+                            Look price for your size
+                        <%}else{%>
+                            Look price for your preferences
+                        <%}%>
                         <a href="<%=product.affiliate_link%>" class="ml-2 text-muted">
                             see here
                             <i class="fas fa-hand-point-right" aria-colcount="text-shadow-1 text-muted f-w-b"></i>
