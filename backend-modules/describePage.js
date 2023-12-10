@@ -110,7 +110,9 @@ var describePage = new Map([
     ["/baby/accessories?type=baby-blankets", {title:"Blankets for baby", description:"Snuggly Comfort: Baby Blankets for Cozy Moments! Explore our selection of soft and warm blankets, perfect for keeping your little one snug and comfortable."}],
     ["/baby/accessories?type=strollers-prams", {title:"Strollers and Prams for baby", description:"Smooth Rides: Strollers and Prams for Effortless Outings! Explore our collection offering comfort and convenience for enjoyable strolls with your little one."}],
     ["/baby/accessories?type=teats-pacifiers", {title:"Teats and pacifiers for baby", description:"Comforting Soothers: Teats and Pacifiers for Calm and Comfort! Explore our range of gentle pacifiers and teats designed to soothe and comfort your baby."}],
-    ["/baby/accessories?type=others", {title:"All accessories for baby", description:"Accessories for baby"}]
+    ["/baby/accessories?type=others", {title:"All accessories for baby", description:"Accessories for baby"}],
+    ["/boy/accessories?type=christmas", {title:"christmas 2023", description:"Buy decorations, Gifts, hats, caps and others for your house boy's, girl's, baby, men's and women's."}],
+    ["/girl/accessories?type=christmas", {title:"christmas 2023", description:"Buy decorations, Gifts, hats, caps and others for your house boy's, girl's, baby, men's and women's."}]
 ])
 
 
