@@ -2,9 +2,11 @@
     1. Afficher details vente
 */
 
+const { log } = require("console");
 var con = require("./MySQL"),
     fs = require("fs"),
-    geoip = require('geoip-lite');
+    geoip = require('geoip-lite'),
+    describePage = require("./describePage");
 
 var DetailsProduct = {
     // 1
@@ -85,6 +87,9 @@ var DetailsProduct = {
             }
              
             var RF = R1 + ";" + R2;
+
+            // keywords
+
             con.query(RF, [number, number, against], (err, rs) =>{
                 if(err){
                     console.log(err);
@@ -100,13 +105,36 @@ var DetailsProduct = {
                         res.redirect("/");
                         console.log(err, "Probleme");
                     }else{
+                        var product = products[0];
+                        console.log(product);
+
+                        // keywords
+                        var keywords = category + " for " + gender;
+                        if(gender == "men-women"){
+                            keywords = category + " for " + "men and women";
+                        }else if(gender == "boy-girl"){
+                            keywords = category + " for " + "boy and girl";
+                        }else{
+                            if(product.type){
+                                var title_describe = describePage.get("/"+gender+"/"+category+"?type="+product.type);
+                                if(title_describe){
+                                    keywords = describePage.get("/"+gender+"/"+category+"?type="+product.type).title;
+                                }
+                            }else{
+                                var title_describe = describePage.get("/"+gender+"/"+category+"?type="+product.type);
+                                if(title_describe){
+                                    keywords = describePage.get("/"+gender+"/"+category).title;
+                                }
+                            }
+                        }
                         res.render("details_produit.html", {
                             countryCode: geo.country,
                             gender: gender,
                             category: category,
                             title_number: title_number,
                             number: number,
-                            product: products[0],
+                            product: product,
+                            keywords: keywords,
                             products_sim: products_sim
                         })
                     }    

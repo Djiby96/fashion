@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<%=product.title%>">
     <link rel="icon" href="/logo/l1.jpg" type="image/jpg">
-    <title><%=product.title%></title>
+    <title><%=keywords%></title>
 
     <!-- my-js -->
     <script defer src="/my-js/details_produit.js"></script>
@@ -59,18 +59,22 @@
         <%- include("./navigation.html") %>
     </header>
 
+    <h6 class="fs-12 text-muted mb-5 mx-3 ml-lg-4" style="text-decoration: underline;">
+        <%=keywords.replaceAll(', ', ' > ')%>
+    </h6>
+
     <!-- product details -->
     <section class="mb-8">
         <div class="center px-2">
             <div class="center mb-4 mr-lg-5" id="container_imgs">
                 <div class="column mr-3 mt-3 d-none" id="container_small_imgs">
                     <%for(let i = 1; i<=product.number_img; i++){%>
-                        <img src="<%=product.url_img.substring(0, product.url_img.lastIndexOf('_') + 1) + i + '.jpg'%>" class="small_imgs op-06 height-5 cs-p rounded m-2 bx-s-2 border hover-op-1" style="max-width: 5rem;" alt="<%=product.title%>" title="<%=product.title%>">
+                        <img src="<%=product.url_img.substring(0, product.url_img.lastIndexOf('_') + 1) + i + '.jpg'%>" class="small_imgs op-06 height-5 cs-p rounded m-2 bx-s-2 border hover-op-1" style="max-width: 5rem;" alt="<%=keywords%>" title="<%=keywords%>">
                     <%}%>
                 </div>
                 <div id="img_bg" class="center position-relative bg-white m-w-90 bx-s-10">
                     <!-- <div class="position-absolute z-i-1 w-100 h-100" id="tr_cl"></div> -->
-                    <img src="<%=product.url_img%>" class="z-i-2 bg-white bx-s-10 w-100 h-100 bx-s-10 px-3" style="max-height: 36rem !important;" id="img_dt" alt="<%=product.title%>" title="<%=product.title%>">
+                    <img src="<%=product.url_img%>" class="z-i-2 bg-white bx-s-10 w-100 h-100 bx-s-10 px-3" style="max-height: 36rem !important;" id="img_dt" alt="<%=keywords%>" title="<%=keywords%>">
                 </div>
             </div>
             <div class="width-32 m-w-100">
@@ -101,8 +105,8 @@
                     <p class="fs-095 f-w-b text-muted" cc="<%=countryCode%>" id="tn">
                         
                     </p>
-                    <a href="<%=product.affiliate_link%>" title="<%=product.title%>">
-                        <button class="br-06 out-n w-100 border-0 p-3 bg-greened text-white mw-90 f-w-b bx-s-10 fs-14">
+                    <a href="<%=product.affiliate_link%>" alt="<%=keywords%>" title="<%=keywords%>">
+                        <button class="br-06 out-n w-100 border-0 p-3 bg-greened text-white mw-90 f-w-b bx-s-10 fs-14" title="<%=keywords%>">
                             <i class="fas fa-shopping-cart"></i>
                             Buy on this store
                         </button>
@@ -174,9 +178,9 @@
             </div>
             <div class="center">
                 <%products_sim.forEach((product) =>{%>
-                    <a href="/<%=product.gender%>/<%=product.category%>/<%=product.title_concat%>-<%=product.number%>?type=<%=product.type%>" class="p_si m-2 m-lg-3 bx-s-2 hover-bx-s-10 width-13 pb-4 br-06 t-d-n" alt="<%=product.title%>" title="<%=product.title%>">
+                    <a href="/<%=product.gender%>/<%=product.category%>/<%=product.title_concat%>-<%=product.number%>?type=<%=product.type%>" class="p_si m-2 m-lg-3 bx-s-2 hover-bx-s-10 width-13 pb-4 br-06 t-d-n" alt="<%=keywords%>" title="<%=keywords%>">
                        <div class="center mb-3">
-                            <img src="<%=product.url_img%>" class="img_si rounded height-12" alt="<%=product.title%>" title="<%=product.title%>" style="max-width: 100% !important;">
+                            <img src="<%=product.url_img%>" class="img_si rounded height-12" alt="<%=keywords%>" title="<%=keywords%>" style="max-width: 100% !important;">
                        </div>
                         <h5 class="text-center fs-12 cl-purple text-shadow-1">
                             <%if(product.price){%>
